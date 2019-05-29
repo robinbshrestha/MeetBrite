@@ -6,13 +6,6 @@ export const signup = user => (
     })
 );
 
-export const fetchUser = user => (
-    $.ajax({
-        method: 'GET',
-        url: `api/users/${id}`
-    })
-);
-
 export const login = user => (
     $.ajax({
         method: 'POST',
