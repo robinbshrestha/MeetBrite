@@ -21,6 +21,7 @@ export default ({ currentUser, logout }) => {
         <h2>Find your next event</h2>
         <div>
             <Link to="/">Log Out</Link>
+            {/* <button onClick={() => logout(currentUser)}>Logout</button> */}
         </div>
     </div>
         )
