@@ -7,16 +7,23 @@ import Root from './components/root';
 // import * as SessionApiUtil from './util/session_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const store = configureStore();
-
+    const root = document.getElementById('root');
     // testing
-    window.getState = store.getState;
-    window.dispatch = store.dispatch;
+    // window.getState = store.getState;
+    // window.dispatch = store.dispatch;
     // window.SessionApiUtil = {};
     // window.SessionApiUtil.signup = SessionApiUtil.signup;
     // window.SessionApiUtil.login = SessionApiUtil.login;
     
-    const root = document.getElementById('root');
+    let preloadedState = undefined;
+    if (window.currentUser){
+        preloadedState = {
+        session: {
+            currentUser: window.currentUser
+            }
+        }
+    }
+    const store = configureStore(preloadedState);
     ReactDOM.render(<Root store={store}/>, root)
 
 })

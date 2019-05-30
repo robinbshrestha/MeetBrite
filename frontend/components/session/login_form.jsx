@@ -6,9 +6,11 @@ class LoginForm extends React.Component {
         this.state = {
             email: '',
             password: '',
-            location_id: "1"
+            location_id: 1
 
         };
+        this.handleSubmit = this.handleSubmit.bind(this);
+
     }
 
     handleInput(type) {
@@ -21,18 +23,6 @@ class LoginForm extends React.Component {
         e.preventDefault();
         this.props.login(this.state)
             .then(() => this.props.history.push('/meetup'));
-    }
-
-    renderErrors() {
-        return (
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
-        );
     }
 
     render() {
