@@ -6,7 +6,6 @@ import SignupForm from './signup_form';
 const msp = ({ errors }) => {
     return {
         errors: errors.session,
-       
     };
 };
 

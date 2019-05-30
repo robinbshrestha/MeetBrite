@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 
 export default () => (
     <div>
-        <h2>Find your next event</h2>
+        <h2>The real world is calling</h2>
+        <Link to="./login">Log in</Link>
         <div>
-            <Link to="/">Log Out</Link>
+        <Link to="./register">Sign up</Link>
         </div>
     </div>
 )

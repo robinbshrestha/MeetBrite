@@ -6,7 +6,8 @@ class Signup extends React.Component {
         this.state = {
             name: '',
             email: '',
-            password: ''
+            password: '',
+            location_id: "1"
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -20,7 +21,7 @@ class Signup extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.signup(this.state)
-            .then( () => this.props.history.push('/loggedin'));
+            .then( () => this.props.history.push('/meetup'));
     }
 
 

@@ -5,7 +5,9 @@ class LoginForm extends React.Component {
         super(props);
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            location_id: "1"
+
         };
     }
 
@@ -18,7 +20,7 @@ class LoginForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.login(this.state)
-            .then(() => this.props.history.push('/loggedin'));
+            .then(() => this.props.history.push('/meetup'));
     }
 
     renderErrors() {
@@ -36,7 +38,7 @@ class LoginForm extends React.Component {
     render() {
         return (
             <div className="login-form">
-                <h2>Sign Up</h2>
+                <h2>Log in</h2>
                 <form>
                     <div>
                         <label>Email address:
