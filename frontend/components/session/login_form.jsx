@@ -4,21 +4,21 @@ class LoginForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: '',
             email: '',
             password: ''
         };
     }
 
-    update(field) {
-        return e => this.setState({
-            [field]: e.target.value
-        });
+    handleInput(type) {
+        return (e) => {
+            this.setState({ [type]: e.target.value });
+        };
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.signup(this.state);
+        this.props.login(this.state)
+            .then(() => this.props.history.push('/loggedin'));
     }
 
     renderErrors() {
@@ -33,5 +33,35 @@ class LoginForm extends React.Component {
         );
     }
 
+    render() {
+        return (
+            <div className="login-form">
+                <h2>Sign Up</h2>
+                <form>
+                    <div>
+                        <label>Email address:
+                            <input
+                                type="text"
+                                value={this.state.email}
+                                onChange={this.handleInput('email')}
+                            />
+                        </label>
+                    </div>
+                    <div>
+                        <label>Password
+                            <input
+                                type="password"
+                                value={this.state.password}
+                                onChange={this.handleInput('password')}
+                            />
+                        </label>
+                    </div>
+                    <button onClick={this.handleSubmit}>Log In</button>
+                </form>
+            </div>
+        )
+    }
+
 }
 
+export default LoginForm
