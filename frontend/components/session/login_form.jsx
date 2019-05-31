@@ -25,6 +25,10 @@ class LoginForm extends React.Component {
             .then(() => this.props.history.push('/meetup'));
     }
 
+    componentDidMount() {
+        this.props.clearErrors();
+    }
+
     renderErrors() {
         return (
             <ul>
