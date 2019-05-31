@@ -6,7 +6,7 @@ export default () => (
         <div>
             <div className="nav-bar">
                 <div className="nav-bar-left">
-                    <Link to="/" className="logo">Meetup</Link>
+                    <Link to="/" className="logo">MeetBrite</Link>
                 </div>    
                 <div className="nav-bar-right">
                     <Link to="/" className="group">Start a new group</Link>

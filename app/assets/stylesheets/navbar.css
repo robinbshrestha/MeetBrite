@@ -53,3 +53,11 @@ a:visited {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.nav-bar > .nav-bar-left > .logo {
+display: inline;
+font-family: 'Pacifico';
+font-size: 30px;
+color: #f64060;
+}
+
+
