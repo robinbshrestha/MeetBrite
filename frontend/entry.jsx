@@ -9,7 +9,7 @@ import Root from './components/root';
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
     // testing
-    // window.getState = store.getState;
+    
     // window.dispatch = store.dispatch;
     // window.SessionApiUtil = {};
     // window.SessionApiUtil.signup = SessionApiUtil.signup;
@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const store = configureStore(preloadedState);
     ReactDOM.render(<Root store={store}/>, root)
+    window.getState = store.getState;
 
 })
 
