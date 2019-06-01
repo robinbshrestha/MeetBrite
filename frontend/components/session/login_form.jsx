@@ -48,7 +48,7 @@ class LoginForm extends React.Component {
                 <div className="grid-all">
                     <div className="grid">
                         <h2>Log in</h2>
-                        <h5>Not registered with us yet? <Link to="/register">Sign up</Link></h5>
+                        <h5 className="not-reg">Not registered with us yet? <Link to="/register" className="not-reg">Sign up</Link></h5>
                     </div>
                     <form>
                         {this.renderErrors()}
@@ -78,11 +78,11 @@ class LoginForm extends React.Component {
                         </div>
                     
                         <div>
-                            <input type="checkbox" />
+                            <input type="checkbox" checked />
                             <label>Keep me signed in
                             </label>
                         </div>
-                        <button onClick={this.handleSubmit}>Log In</button>
+                            <h4><Link className="login-checkbox" onClick={this.handleSubmit}>Log In</Link></h4>
                         </div>
                     </form>
                     

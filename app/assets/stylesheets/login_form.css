@@ -9,27 +9,63 @@
     justify-content: center;
     float: none;
     line-height: 1.5;
-    border-radius: 3px;
+   
     background-color: #fff;
     margin-bottom: 16px;
     border: 1px solid rgba(0,0,0,.12);
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+
     font-weight: 400;
     max-width: 35%;
+
     position: relative; left: 400px; top: 70px;
     
 
+
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    border-radius: 3px;
     
 }
 
 .input {
-    background-color: rgba(250,250,250,1);
     line-height: 1.5;
     padding: 4px;
     color: rgba(0,0,0,.87);
     border: 1px solid rgba(0,0,0,.12);
+   
+
+    position: relative;
+    z-index: 1;
     width: 95%;
+    background-color: rgba(250,250,250,1);
+
+
 }
+
+a.login-checkbox:link, a.login-checkbox:visited {
+  background-color: #ED1C40;
+  color: white;
+  padding: 8px 17px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.login-checkbox:hover, a.login-checkbox:active {
+  background-color: #d01031;
+}
+
+a.login-checkbox {
+    border-radius: 3px;
+}
+
+a.not-reg:link, a.not-reg:visited {
+    text-decoration: none;
+    color: #2e25cc;
+}
+a.not-reg:hover, a.not-reg:active {
+   text-decoration: underline
+}
+
 
 
