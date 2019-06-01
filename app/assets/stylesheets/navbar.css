@@ -1,7 +1,7 @@
 .nav-bar {
     position: relative;
     display: flex;
-    padding: 16px 8px 8px;
+    padding: 20px 10px 10px;
     justify-content: space-between;
     border-bottom: .5px solid rgb(224, 224, 224);
     height: 40px;
@@ -14,31 +14,29 @@
     justify-content: space-around;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .nav-bar-right > .group {
-    display: inline;
     padding-right: 40px;
     color: #00A2C7;
     font-weight: bold;
 
 }
 
-.nav-bar-right > .login {
-    display: inline;
+.nav-bar-right > .nav {
     padding-right: 20px;
 }
 
-a {
+a.nav {
     color: #585858;
 }
 
-a:link{
+a.nav:link, a.logo:link, a.group:link{
     text-decoration: none;
 }
 
-a:visited {
+a.nav:visited, a.group:visited, a.logo:link{
   text-decoration: none;
 }
 
@@ -53,11 +51,14 @@ a:visited {
 }
 
 .nav-bar > .nav-bar-left > .logo {
-display: inline;
 font-family: 'Pacifico';
 font-size: 30px;
-padding-bottom: 10px;
 color: #f64060;
+position: relative; bottom: 10px;
+}
+
+a.nav:hover, a.nav:active {
+    color: #97cad1;
 }
 
 

@@ -10,8 +10,8 @@ export default () => (
                 </div>    
                 <div className="nav-bar-right">
                     <Link to="/" className="group">Start a new group</Link>
-                    <Link to="/login" className="login">Log in</Link>
-                    <Link to="/register">Sign up</Link>
+                    <Link to="/login" className="nav">Log in</Link>
+                    <Link to="/register" className="nav">Sign up</Link>
                 </div>
             </div> 
             

@@ -10,7 +10,7 @@ export default () => (
         <h2>The real world is calling</h2>
         <h3>Join a local group to meet people, try something new, or do more of what you love.</h3>
         <span className="center-button">
-                <h4><Link to="/register">Join Meetup</Link></h4>
+                <h4><Link className="index" to="/register">Join Meetup</Link></h4>
         </span>
     </div>
 </div>

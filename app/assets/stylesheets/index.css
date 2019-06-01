@@ -35,3 +35,23 @@
     position: relative; bottom: 60px
 }
 
+.center-button{
+    position: relative; bottom: 50px
+}
+
+a.index:link, a.index:visited {
+  background-color: #F13A59;
+  color: white;
+  padding: 15px 120px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.index:hover, a.index:active {
+  background-color: #ed1c3f;
+}
+
+a.index{
+    border-radius: 5px;
+}
