@@ -1,5 +1,6 @@
 import React from 'react';
-import Navbar from './nav/navbar';
+import Index from './index';
+import NavbarContainer from './nav/navbar_container';
 import Meetup from './nav/meetup_container';
 import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
@@ -12,13 +13,15 @@ import {
 const App = () => (
     <div>
         <header>
+            <NavbarContainer/>
             <Route path="/register" component={SignupFormContainer} />
-            <Route path="/login" component={LoginFormContainer} />
-            <Route exact path="/" component={Navbar} />
+            
+            <Route exact path="/" component={Index} />
             <Route path="/meetup" component={Meetup} />
+            <Route path="/login" component={LoginFormContainer} />
 
         </header>
-        
+
     </div>
 );
 

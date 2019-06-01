@@ -1,0 +1,25 @@
+.video-container{
+    height: 460px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#video {
+    display: flex;
+    width: 100%;
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 10%;
+    left: 0%;
+    right: 0%;
+    z-index: 1;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: sans-serif;
+}
+
