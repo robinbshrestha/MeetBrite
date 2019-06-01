@@ -8,6 +8,7 @@
 #video {
     display: flex;
     width: 100%;
+    filter: brightness(75%);
 }
 
 .overlay {
@@ -20,6 +21,17 @@
     z-index: 1;
     color: #FFFFFF;
     text-align: center;
-    font-family: sans-serif;
+    font-family: helvetica;
+}
+
+.overlay > h2 {
+    font-size: 42px;
+    font-weight: bold;
+    position: relative; bottom: 30px
+}
+
+.overlay > h3 {
+    font-size: 20px;
+    position: relative; bottom: 60px
 }
 
