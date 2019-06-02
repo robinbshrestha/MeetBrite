@@ -12,6 +12,7 @@
     margin-bottom: 16px;
     border: 1px solid rgba(0,0,0,.12);
     font-weight: 400;
+    /* max-width: 35%; */
     width: 460px;
     position: relative; left: 400px; top: 70px;
     font-family: Helvetica, sans-serif;    
@@ -23,7 +24,7 @@
     flex-direction: column;
     margin-left: 20px;
     margin-top: 0px;
-    position: relative; top 0px;
+    position: relative; top 0px
 }
 
 .not-reg {
@@ -76,64 +77,5 @@ a.not-reg:hover, a.not-reg:active {
    text-decoration: underline
 }
 
-
-
-
-
-#login-box{
-     position: relative;
-     margin: 0 auto;
-     border: 1px solid rgba(0,0,0,.12);
-     height: 610px;
-     background: #fff;
-     width: 460px;
-     font-family: Arial, Helvetica, sans-serif
- }
-
-.left-box {
-    position: relative;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-    padding: 20px;
-    width: 460px;
-    height: 400px;
-}
-
-
-.or{
-    position: absolute;
-    top: 290px;
-    left: 200px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    line-height: 40px;
-    text-align: center;
-
-}
-
-
-.right-box .social {
-    margin-bottom: 20px;
-    width: 420px;
-    height: 47px;
-    border: none;
-    border-radius: 2px;
-    color: fff;
-    font-family: sans-serif;
-    font-weight: 500;
-    transition: 0.2s ease;
-    cursor: pointer;
-}
-
-.facebook{
-    background: #32508e;
-
-}
-
-.google{
-    background: whitesmoke;
-}
 
 
