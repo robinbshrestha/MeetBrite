@@ -44,56 +44,109 @@ class LoginForm extends React.Component {
 
     render() {
         return (
+            // <div className="all">
+            //     <div className="grid-all">
+            //         <div className="grid">
+            //             <div className="grid1">
+            //             <h2 className="gridlog">Log in</h2>
+            //             <h5 className="not-reg">Not registered with us yet? <Link to="/register" className="not-reg">Sign up</Link></h5>
+            //             </div>
+            //         </div>
+                    // <form>
+                    //     {this.renderErrors()}
+                    // <div className="grid">
+                    //     <div className>
+                    //         <label>Email address:
+                    //             <div>
+                    //                 <input className="input"
+                    //                     type="text"
+                    //                     value={this.state.email}
+                    //                     onChange={this.handleInput('email')}
+                    //                 />
+                    //             </div>
+                    //         </label>
+                    //     </div>
+                    
+                    //     <div>
+                    //         <label>Password
+                    //             <div>
+                    //                 <input className="input"
+                    //                     type="password"
+                    //                     value={this.state.password}
+                    //                     onChange={this.handleInput('password')}
+                    //                 />
+                    //             </div> 
+                    //         </label>
+                    //     </div>
+                    
+                    //     <div>
+                    //         <input type="checkbox" checked />
+                    //         <label>Keep me signed in
+                    //         </label>
+                    //     </div>
+                    //         <h4><Link className="login-checkbox" onClick={this.handleSubmit}>Log In</Link></h4>
+                    //     </div>
+                    // </form>
+                    
+
+
             <div className="all">
-                <div className="grid-all">
-                    <div className="grid">
-                        <h2>Log in</h2>
-                        <h5 className="not-reg">Not registered with us yet? <Link to="/register" className="not-reg">Sign up</Link></h5>
-                    </div>
+            <div id="login-box">
+
+                <div className="left-box">
+                <h2>Log in</h2>
+                    <h5>Not registered with us yet? <Link to="/register" className="not-reg">Sign up</Link></h5>
+
                     <form>
                         {this.renderErrors()}
-                    <div className="grid">
-                        <div className>
-                            <label>Email address:
+                        <div className="grid">
+                            <div>
+                                <label>Email address:
                                 <div>
-                                    <input className="input"
-                                        type="text"
-                                        value={this.state.email}
-                                        onChange={this.handleInput('email')}
-                                    />
-                                </div>
-                            </label>
-                        </div>
-                    
-                        <div>
-                            <label>Password
+                                        <input className="input"
+                                            type="text"
+                                            value={this.state.email}
+                                            onChange={this.handleInput('email')}
+                                        />
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div>
+                                <label>Password
                                 <div>
-                                    <input className="input"
-                                        type="password"
-                                        value={this.state.password}
-                                        onChange={this.handleInput('password')}
-                                    />
-                                </div> 
+                                        <input className="input"
+                                            type="password"
+                                            value={this.state.password}
+                                            onChange={this.handleInput('password')}
+                                        />
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" checked />
+                                <label>Keep me signed in
                             </label>
-                        </div>
-                    
-                        <div>
-                            <input type="checkbox" checked />
-                            <label>Keep me signed in
-                            </label>
-                        </div>
+                            </div>
                             <h4><Link className="login-checkbox" onClick={this.handleSubmit}>Log In</Link></h4>
                         </div>
-                    </form>
-                    
-                    <div className="loginfb">
-                        <div>
-                            <button>Log in with Facebook</button>
+
+                        <div className="right-box">
+
+                            <button className="social facebook">Log in with Facebook</button>
+                            <button className="social google">Log in with Google</button>
                         </div>
-                        <button>Log in with Google</button>
-                    </div>
+
+                        <div className="or">OR </div>
+                    </form>
                 </div>
+
+
             </div>
+            </div>
+
+
         )
     }
 
