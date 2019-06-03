@@ -16,20 +16,20 @@ class Navbar extends React.Component {
         e.preventDefault();
 
         this.setState({
-            nomenu: true,
+            yesmenu: true,
         }, () => {
             document.addEventListener('click', this.nomenu);
         });
     }
 
-    nomenu(e) {
-        e.preventDefault();
-        this.setState({ yesmenu: false}, () => {
+    nomenu() {
+        this.setState({ yesmenu: false }, () => {
             document.removeEventListener('click', this.nomenu);
         });
     }
     
     render() {
+        
         const loggedout = () => (
             <div>
                 <div>
@@ -59,7 +59,17 @@ class Navbar extends React.Component {
                             <Link to="/meetup" className="lognav">Explore</Link>
                             <Link to="/meetup" className="lognav">Messages</Link>
                             <Link to="/meetup" className="lognav">Notifications</Link>
-                            <Link to="/meetup" className="lognav"><i class="far fa-user-circle"></i></Link>
+                            <div className="dropdown">
+                                <i className="far fa-user-circle" onClick={this.yesmenu}></i>
+                            </div>
+                            {this.state.yesmenu ? (
+                                <div>
+                                    <button onClick={this.props.logout}>Log Out</button>
+                                </div>
+                            ) : (
+                                    null
+                                )
+                            }
                         </div>
                     </div>
                 </div>

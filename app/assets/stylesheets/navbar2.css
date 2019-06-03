@@ -63,6 +63,6 @@ a.lognav:hover, a.lognav:active {
     color: #f64060;
 }
 
-.lognav > i {
+.dropdown {
     font-size: 30px;
 }
