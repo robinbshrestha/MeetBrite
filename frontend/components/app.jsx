@@ -14,11 +14,11 @@ const App = () => (
     <div>
         <header>
             <NavbarContainer/>
-            <Route path="/register" component={SignupFormContainer} />
+            <AuthRoute path="/register" component={SignupFormContainer} />
             
             <Route exact path="/" component={Index} />
-            <Route path="/meetup" component={Meetup} />
-            <Route path="/login" component={LoginFormContainer} />
+            <ProtectedRoute path="/meetup" component={Meetup} />
+            <AuthRoute path="/login" component={LoginFormContainer} />
 
         </header>
 
