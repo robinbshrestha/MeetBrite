@@ -50,14 +50,16 @@ class Navbar extends React.Component {
         const loggedin = () => (
             <div>
                 <div>
-                    <div className="nav-bar">
-                        <div className="nav-bar-left">
-                            <Link to="/" className="logo">MeetBrite</Link>
+                    <div className="lognav-bar">
+                        <div className="lognav-bar-left">
+                            <Link to="/" className="loglogo">MeetBrite</Link>
                         </div>
-                        <div className="nav-bar-right">
-                            <Link to="/" className="group">Start a new group</Link>
-                            <Link to="/login" className="nav">bog in</Link>
-                            <Link to="/register" className="nav">Sign up</Link>
+                        <div className="lognav-bar-right">
+                            <Link to="/" className="loggroup">Start a new group</Link>
+                            <Link to="/meetup" className="lognav">Explore</Link>
+                            <Link to="/meetup" className="lognav">Messages</Link>
+                            <Link to="/meetup" className="lognav">Notifications</Link>
+                            <Link to="/meetup" className="lognav"><i class="far fa-user-circle"></i></Link>
                         </div>
                     </div>
                 </div>

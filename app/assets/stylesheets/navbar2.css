@@ -1,0 +1,68 @@
+.lognav-bar {
+    position: relative;
+    display: flex;
+    padding: 20px 10px 10px;
+    justify-content: space-between;
+    border-bottom: .5px solid rgb(224, 224, 224);
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.lognav-bar-right {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.lognav-bar-right > .loggroup {
+    padding-right: 40px;
+    color: #f64060;
+    font-weight: bold;
+    
+
+}
+
+.lognav-bar-right > .lognav {
+    padding-right: 20px;
+ 
+}
+
+a.lognav {
+    color: #585858;
+}
+
+a.lognav:link, a.loglogo:link, a.loggroup:link{
+    text-decoration: none;
+}
+
+a.lognav:visited, a.loggroup:visited, a.loglogo:link{
+  text-decoration: none;
+}
+
+.center-text {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.center-button {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.lognav-bar > .lognav-bar-left > .loglogo {
+font-family: 'Pacifico';
+font-size: 30px;
+color: #f64060;
+position: relative; bottom: 10px;
+}
+
+a.lognav:hover, a.lognav:active {
+    color: #f64060;
+}
+
+.lognav > i {
+    font-size: 30px;
+}
