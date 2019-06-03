@@ -24,3 +24,13 @@ export default ({ currentUser, logout }) => {
         </div>
     )
 }
+
+// export default ({currentUser, logout}) => {
+
+//     return (
+//         <div>
+//             <p>Hello, {currentUser.name}</p>
+//             <Link to="/" onClick={logout}>Log Out</Link>
+//         </div>
+//     )
+// }
