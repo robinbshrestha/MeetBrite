@@ -28,6 +28,60 @@
 
 }
 
+.sign-box1 > h4 {
+    margin: 0px;
+}
+
+.sign-box2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 265px;
+    background-color: #fff;
+}
+
+.sign-input {
+    line-height: 1.5;
+    padding: 4px;
+    color: rgba(0,0,0,.87);
+    border: 1px solid rgba(0,0,0,.12);
+    height: 25px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    background-color: rgba(250,250,250,1);
+
+}
+
+.sign-label1, .sign-label2, .sign-label3{
+    position: relative;
+    left: 15px;
+}
+
+.sign-label1{
+    position: relative;
+    top: 20px;
+}
+
+.sign-label2{
+    position: relative;
+    top: 40px;
+}
+
+.sign-label3{
+    position: relative;
+    top: 60px;
+}
+
+.sign-input:focus{
+  border-color: #1f24cd;
+  outline: 0;
+}
+
 a.sign-facebook:link, a.sign-facebook:visited {
   background-color: #3b5998;
   color: white;
@@ -38,7 +92,7 @@ a.sign-facebook:link, a.sign-facebook:visited {
   border-radius: 3px;
   width: 85%;
   position: relative;
-  bottom: 30px;
+  bottom: 15px;
   left: 15px;
   font-size: 18px;
 }
@@ -54,10 +108,9 @@ a.sign-google:link, a.sign-google:visited {
   width: 85%;
   position: relative;
   left: 15px;
-  bottom: 60px;
+  bottom: 0px;
   border: 1px solid gray;
   position: relative;
   font-size: 18px;
-
   
 }

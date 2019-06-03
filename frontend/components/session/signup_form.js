@@ -47,42 +47,43 @@ class Signup extends React.Component {
             <div className="sign-all">
                 <div className="sign-container">
                 <div className="sign-box1">
-                        <h2>Sign Up</h2>
-                    <div>
-                        <h4><Link className="sign-facebook" onClick={this.handleSubmit}>Continue with Facebook</Link></h4>
-                    </div>
+                    <h2>Sign Up</h2>
+                    <h4><Link className="sign-facebook" onClick={this.handleSubmit}>Continue with Facebook</Link></h4>
                     <h4><Link className="sign-google" onClick={this.handleSubmit}>Continue with Google</Link></h4>
                 </div>
                 <form>
                     {this.renderErrors()}
                     <div className="sign-box2">
-                        <label>Your name
-                            <input 
-                            type="text"
-                            value={this.state.name}
-                            onChange={this.handleInput('name')}
-                            />
+                        <label className="sign-label1">Your name
+                            <div>
+                                <input className="sign-input"
+                                    type="text"
+                                    value={this.state.name}
+                                    onChange={this.handleInput('name')}
+                                />
+                            </div>
                         </label>
-                    </div>
-                    <div>
-                        <label>Email address
-                            <input
-                                type="text"
-                                value={this.state.email}
-                                onChange={this.handleInput('email')}
-                            />
+                        <label className="sign-label2">Email address
+                            <div>
+                                <input className="sign-input"
+                                    type="text"
+                                    value={this.state.email}
+                                    onChange={this.handleInput('email')}
+                                />
+                            </div>
                         </label>
-                    </div> 
-                    <div>
-                        <label>Password
-                            <input
-                                type="password"
-                                value={this.state.password}
-                                onChange={this.handleInput('password')}
-                            />
+                    
+                        <label className="sign-label3">Password
+                            <div>
+                                <input className="sign-input"
+                                    type="password"
+                                    value={this.state.password}
+                                    onChange={this.handleInput('password')}
+                                />
+                            </div>
                         </label>
-                    </div>
-                    <button onClick={this.handleSubmit}>Continue</button>
+                            {/* <button onClick={this.handleSubmit}>Continue</button> */}
+                        </div> 
                 </form>
                 </div>
             </div>
