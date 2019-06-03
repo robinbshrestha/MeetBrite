@@ -9,8 +9,8 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script src="https://kit.fontawesome.com/007836c3ec.js"> </script>
     <% if current_user %>
-      <script src="https://kit.fontawesome.com/007836c3ec.js"> </script>
       <script>
         window.currentUser = {
           "id": "<%= current_user.id %>",
