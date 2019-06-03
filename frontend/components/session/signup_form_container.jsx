@@ -12,7 +12,8 @@ const msp = ({ errors }) => {
 const mdp = dispatch => {
     return {
         signup: (user) => dispatch(signup(user)),
-        clearErrors: () => dispatch(clearErrors())
+        clearErrors: () => dispatch(clearErrors()),
+        login: user => dispatch(login(user)),
     };
 };
 

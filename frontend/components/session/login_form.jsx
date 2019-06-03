@@ -10,7 +10,12 @@ class LoginForm extends React.Component {
 
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.logindemouser = this.logindemouser.bind(this);
+    }
 
+    logindemouser() {
+        const demo = Object.assign({}, {email: 'demo@gmail.com', password: 'demo12345' });
+        this.props.login(demo);
     }
 
     handleInput(type) {
@@ -77,7 +82,7 @@ class LoginForm extends React.Component {
                     
                     <div className="box3">
                         <div>
-                            <h4><Link className="login-facebook" onClick={this.handleSubmit}>Log in with Facebook</Link></h4>
+                            <h4><Link className="login-facebook" onClick={this.logindemouser}>Log in with Demo User</Link></h4>
                         </div>
                             <h4><Link className="login-google" onClick={this.handleSubmit}>Log in with Google</Link></h4>                    
                     </div>
