@@ -77,8 +77,10 @@ class LoginForm extends React.Component {
                     
                     <div className="box3">
                         <div>
-                            <h4><Link className="login-facebook" onClick={this.handleSubmit}>Log in with Facebook</Link></h4>                        </div>
-                        <h4><Link className="login-google" onClick={this.handleSubmit}>Log in with Google</Link></h4>                    </div>
+                            <h4><Link className="login-facebook" onClick={this.handleSubmit}>Log in with Facebook</Link></h4>
+                        </div>
+                            <h4><Link className="login-google" onClick={this.handleSubmit}>Log in with Google</Link></h4>                    
+                    </div>
                 </div>
             </div>
         )

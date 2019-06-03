@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Signup extends React.Component {
     constructor(props){
@@ -43,11 +44,18 @@ class Signup extends React.Component {
 
     render(){
         return (
-            <div className="signup-form">
-                <h2>Sign Up</h2>
+            <div className="sign-all">
+                <div className="sign-container">
+                <div className="sign-box1">
+                        <h2>Sign Up</h2>
+                    <div>
+                        <h4><Link className="sign-facebook" onClick={this.handleSubmit}>Continue with Facebook</Link></h4>
+                    </div>
+                    <h4><Link className="sign-google" onClick={this.handleSubmit}>Continue with Google</Link></h4>
+                </div>
                 <form>
                     {this.renderErrors()}
-                    <div>
+                    <div className="sign-box2">
                         <label>Your name
                             <input 
                             type="text"
@@ -76,6 +84,7 @@ class Signup extends React.Component {
                     </div>
                     <button onClick={this.handleSubmit}>Continue</button>
                 </form>
+                </div>
             </div>
         )
     }
