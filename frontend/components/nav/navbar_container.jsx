@@ -4,7 +4,7 @@ import { logout } from '../../actions/session_actions';
 import Navbar from './navbar';
 
 const msp = state => ({
-    currentUser: state.session.currentUser,
+    currentUser: state.session.currentUser
 });
 
 const mdp = dispatch => ({
