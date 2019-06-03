@@ -82,9 +82,12 @@ class Signup extends React.Component {
                                 />
                             </div>
                         </label>
-                            {/* <button onClick={this.handleSubmit}>Continue</button> */}
-                        </div> 
+                    </div> 
                 </form>
+                    <div className="sign-box3">
+                        <i className="fas fa-map-marker-alt"></i>
+                            <label>New York, NY</label>
+                    </div>
                 </div>
             </div>
         )

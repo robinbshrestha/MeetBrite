@@ -45,7 +45,7 @@
     padding: 4px;
     color: rgba(0,0,0,.87);
     border: 1px solid rgba(0,0,0,.12);
-    height: 25px;
+    height: 30px;
     border-radius: 5px;
     font-family: Arial, sans-serif;
     font-size: 15px;
@@ -60,6 +60,7 @@
 .sign-label1, .sign-label2, .sign-label3{
     position: relative;
     left: 15px;
+    font-size: 14px;
 }
 
 .sign-label1{
@@ -80,6 +81,24 @@
 .sign-input:focus{
   border-color: #1f24cd;
   outline: 0;
+}
+
+.sign-box3 > i {
+color: grey;
+font-size: 18px;
+position: relative;
+left: 20px;
+bottom: 15px;
+}
+
+.sign-box3 > label {
+    position: relative;
+    left: 30px;
+    bottom: 15px;
+    color: gray;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
 }
 
 a.sign-facebook:link, a.sign-facebook:visited {
