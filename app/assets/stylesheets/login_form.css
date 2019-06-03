@@ -1,42 +1,88 @@
 .all {
     background-color: rgba(250,250,250,1);
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.grid-all{
+.container{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    line-height: 1.5;
-    background-color: #fff;
-    margin-bottom: 16px;
-    border: 1px solid rgba(0,0,0,.12);
-    font-weight: 400;
-    /* max-width: 35%; */
     width: 460px;
-    position: relative; left: 400px; top: 70px;
-    font-family: Helvetica, sans-serif;    
-    
+    height: 530px;
+    border: 1px solid #dbdbdb;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+
+    /* justify-content: center; */
+    /* line-height: 1.5; */
+    /* margin-bottom: 16px; */
+    /* font-weight: 400; */
+    /* position: relative; left: 400px; top: 70px; */
+    /* align-items: center; */
 }
 
-.grid1{
+.box1{
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
-    margin-top: 0px;
+    /* margin-left: 20px; */
+    /* margin-top: 0px; */
+    height: 100.7px;
+    /* width: 100%; */
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    background-color: #fff;
 }
 
-.not-reg {
+.box1 > h2{
+    font-size: 30px;
     position: relative;
-    margin-top: 0px;
+    left: 15px;
+    bottom: 10px;
+
 }
 
-.h2 > .gridlog {
-    margin: 0%;
+.box1 > p {
+    font-size: 13px;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    position: relative;
+    bottom: 30px;
+    left: 15px;
+}
+
+.lock {
+    position: relative;
+    right: 7px;
+}
+
+.box2{
+    display: flex;
+    flex-direction: column;
+    
+    height: 265px;
+    border-bottom: 1px solid #617aad;
+    background-color: #fff;
+
 }
 
 
-.input {
+
+.box3 {
+    height: 164.3px;
+}
+
+a.not-reg:link, a.not-reg:visited {
+    text-decoration: none;
+    color: #2e25cc;
+}
+a.not-reg:hover, a.not-reg:active {
+   text-decoration: underline
+}
+
+
+
+/* .input {
     line-height: 1.5;
     padding: 4px;
     color: rgba(0,0,0,.87);
@@ -49,7 +95,7 @@
     background-color: rgba(250,250,250,1);
 
 
-}
+} */
 
 a.login-checkbox:link, a.login-checkbox:visited {
   background-color: #ED1C40;
@@ -68,13 +114,6 @@ a.login-checkbox {
     border-radius: 3px;
 }
 
-a.not-reg:link, a.not-reg:visited {
-    text-decoration: none;
-    color: #2e25cc;
-}
-a.not-reg:hover, a.not-reg:active {
-   text-decoration: underline
-}
 
 
 
