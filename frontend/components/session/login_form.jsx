@@ -31,20 +31,19 @@ class LoginForm extends React.Component {
 
     renderErrors() {
         return (
-            <ul>
+            <div>
                 {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
+                    <p key={`error-${i}`}>
                         {error}
-                    </li>
+                    </p>
                 ))}
-            </ul>
+            </div>
         );
     }
 
     render() {
         return (
             <div className="all">
-                {this.renderErrors()}
                 <div className="container">
                     <div className="box1">
                         <h2>Log in <img className="lock" src="https://secure.meetupstatic.com/s/img/09300654065624139187/icon/icon_padlock.gif" /></h2>
@@ -52,22 +51,23 @@ class LoginForm extends React.Component {
                     </div>
                 <form>
                     <div className="box2">
-                        <label>Email address:
+                        <label className="email">Email address:
                             <input className="input"
                                 type="text"
                                 value={this.state.email}
                                 onChange={this.handleInput('email')}
                             />
                         </label>
-                        <label>Password
+                        <label className="password">Password
                             <input className="input"
                                 type="password"
                                 value={this.state.password}
                                 onChange={this.handleInput('password')}
                             />
                         </label>
-                        <input type="checkbox" checked />
-                        <label>Keep me signed in</label>
+                        <input type="checkbox" className="checkbox" checked />
+                        <label className="keepme">Keep me signed in</label>
+                            <div className="err"> {this.renderErrors()}</div>
                         <h4><Link className="login-checkbox" onClick={this.handleSubmit}>Log In</Link></h4>
                     </div>    
                 </form>

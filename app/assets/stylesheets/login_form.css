@@ -9,27 +9,23 @@
 .container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     width: 460px;
-    height: 530px;
+    height: 600px;
     border: 1px solid #dbdbdb;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
 
-    /* justify-content: center; */
     /* line-height: 1.5; */
     /* margin-bottom: 16px; */
     /* font-weight: 400; */
     /* position: relative; left: 400px; top: 70px; */
-    /* align-items: center; */
+   
 }
 
 .box1{
     display: flex;
     flex-direction: column;
-    /* margin-left: 20px; */
-    /* margin-top: 0px; */
     height: 100.7px;
-    /* width: 100%; */
     border-bottom: 1px solid rgba(0,0,0,.12);
     background-color: #fff;
 }
@@ -60,13 +56,63 @@
     display: flex;
     flex-direction: column;
     
-    height: 265px;
+    height: 345px;
     border-bottom: 1px solid #617aad;
     background-color: #fff;
 
 }
 
+.input {
+    line-height: 1.5;
+    padding: 4px;
+    color: rgba(0,0,0,.87);
+    border: 1px solid rgba(0,0,0,.12);
+   
 
+    /* position: relative; */
+    /* left: 15px; */
+    z-index: 1;
+    width: 91%;
+    background-color: rgba(250,250,250,1);
+
+}
+
+.email{
+    position: relative;
+    left: 15px;
+    top: 20px;
+}
+
+.password{
+    position: relative;
+    left: 15px;
+    top: 30px;
+}
+
+.keepme{
+    position: relative;
+    left: 40px;
+    top: 31px;
+}
+
+.checkbox{
+    position: relative;
+    left: 15px;
+    top: 50px;
+}
+
+.login-checkbox{
+    position: relative;
+    left: 15px;
+    top: 60px;
+}
+
+.err {
+    position: relative;
+    left: 15px;
+    top: 70px;
+    color: #ED1C40;
+}
 
 .box3 {
     height: 164.3px;
@@ -79,23 +125,6 @@ a.not-reg:link, a.not-reg:visited {
 a.not-reg:hover, a.not-reg:active {
    text-decoration: underline
 }
-
-
-
-/* .input {
-    line-height: 1.5;
-    padding: 4px;
-    color: rgba(0,0,0,.87);
-    border: 1px solid rgba(0,0,0,.12);
-   
-
-    position: relative;
-    z-index: 1;
-    width: 95%;
-    background-color: rgba(250,250,250,1);
-
-
-} */
 
 a.login-checkbox:link, a.login-checkbox:visited {
   background-color: #ED1C40;
