@@ -59,6 +59,9 @@ class LoginForm extends React.Component {
                             />
                         </label>
                         <label className="password">Password
+                        <div>
+                        <Link to="/login" className="forgot">Forgot your password?</Link>
+                        </div>
                             <input className="input"
                                 type="password"
                                 value={this.state.password}
@@ -68,16 +71,14 @@ class LoginForm extends React.Component {
                         <input type="checkbox" className="checkbox" checked />
                         <label className="keepme">Keep me signed in</label>
                             <div className="err"> {this.renderErrors()}</div>
-                        <h4><Link className="login-checkbox" onClick={this.handleSubmit}>Log In</Link></h4>
+                        <div className="login-div"><Link className="login-link" onClick={this.handleSubmit}>Log In</Link></div>
                     </div>    
                 </form>
                     
                     <div className="box3">
                         <div>
-                            <button>Log in with Facebook</button>
-                        </div>
-                        <button>Log in with Google</button>
-                    </div>
+                            <h4><Link className="login-facebook" onClick={this.handleSubmit}>Log in with Facebook</Link></h4>                        </div>
+                        <h4><Link className="login-google" onClick={this.handleSubmit}>Log in with Google</Link></h4>                    </div>
                 </div>
             </div>
         )
