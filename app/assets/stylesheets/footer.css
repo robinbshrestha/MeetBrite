@@ -1,0 +1,9 @@
+.footer {
+    display: block;
+    background-color: #353e48;
+    height: 300px;
+}
+
+.footer-box1 {
+    font-size: 40px;
+}
