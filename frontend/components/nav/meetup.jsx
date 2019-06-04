@@ -28,9 +28,20 @@ import { Link } from 'react-router-dom';
 export default ({currentUser, logout}) => {
 
     return (
-        <div>
-            <p>Hello, {currentUser.name}</p>
-            <Link to="/" onClick={logout}>Log Out</Link>
+        <div className="mu-container">
+            <div className="mu-find">
+                <div className="mu-find-text">
+                    <text>Find your next event</text>
+                    <div>1 event in your groups · 5000 events near you</div>
+                </div>
+                
+            </div>
+
         </div>
+
+        // <div>
+        //     <p>Hello, {currentUser.name}</p>
+        //     <Link to="/" onClick={logout}>Log Out</Link>
+        // </div>
     )
 }

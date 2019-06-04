@@ -21,7 +21,7 @@ class LoginForm extends React.Component {
     handleInput(type) {
         return (e) => {
             this.setState({ [type]: e.target.value });
-        };
+        };  
     }
 
     handleSubmit(e) {
