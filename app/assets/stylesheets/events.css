@@ -3,7 +3,9 @@
     display: grid;
     grid-template-columns: 155px auto 260px 155px;
     grid-template-rows: 150px 700px auto;
-}
+}  
+
+
 
 .events-grid1{
     grid-column-start: 2;
@@ -13,9 +15,6 @@
     border: 1px solid gray;
 }
 
-.grid1-box1{
-
-}
 
 .events-grid2{
     grid-column-start: 3;
@@ -24,3 +23,19 @@
     grid-row-end: 3;  
     border: 1px solid gray;  
 }
+
+/* .events { 
+    width: 960px;
+    margin: 0 auto;
+    border: solid gray 1px;
+}
+
+.events-grid1 {
+    width: 680px;
+    border: solid gray 1px;
+}
+
+.events-grid2{
+    width: 260px;
+    border: solid gray 1px;
+} */

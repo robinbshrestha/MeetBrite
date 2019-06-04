@@ -1,0 +1,29 @@
+.groups{
+    background-color: #fafafa;
+    display: grid;
+    grid-template-columns: 155px auto auto auto 155px;
+    grid-template-rows: 150px 180px auto;
+}  
+
+
+
+.groups-grid1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border: 1px solid gray;
+}
+
+
+.groups-grid2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;  
+    border: 1px solid gray;  
+}
+
+.groups-grid3 {
+    
+}

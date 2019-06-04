@@ -1,0 +1,1 @@
+json.extract! group, :id, :organizer_id, :description, :location_id, :title
