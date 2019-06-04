@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 class Footer extends React.Component {
     render () {
+
         return (
             <div className="footer">
                 <div className="footer-box1">

@@ -21,7 +21,7 @@ const App = () => (
             <Route exact path="/" component={Index} />
             <ProtectedRoute path="/meetup" component={Meetup} />
             <AuthRoute path="/login" component={LoginFormContainer} />
-            {/* <EventsContainer/> */}
+            <EventsContainer />
             <FooterContainer/>
 
         </header>

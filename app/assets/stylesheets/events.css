@@ -1,5 +1,26 @@
 .events{
-    display: block;
     background-color: #fafafa;
-    height: 1000px;
+    display: grid;
+    grid-template-columns: 155px auto 260px 155px;
+    grid-template-rows: 150px 700px auto;
+}
+
+.events-grid1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1.5;
+    grid-row-end: 3;
+    border: 1px solid gray;
+}
+
+.grid1-box1{
+
+}
+
+.events-grid2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;  
+    border: 1px solid gray;  
 }
