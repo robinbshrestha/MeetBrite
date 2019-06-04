@@ -6,6 +6,7 @@ import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
 import { Route } from 'react-router-dom';
 import FooterContainer from './footer/footer_container';
+import EventsContainer from './events/events_container';
 import { 
     AuthRoute,
     ProtectedRoute
@@ -20,6 +21,7 @@ const App = () => (
             <Route exact path="/" component={Index} />
             <ProtectedRoute path="/meetup" component={Meetup} />
             <AuthRoute path="/login" component={LoginFormContainer} />
+            <EventsContainer/>
             <FooterContainer/>
 
         </header>
