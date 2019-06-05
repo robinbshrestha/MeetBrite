@@ -17,7 +17,7 @@ class CreateForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.createGroup(this.state)
-        .then( () => this.props.history.push('/meetups'));
+        .then( () => this.props.history.push('/meetup'));
     }
 
     render () {
