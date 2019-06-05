@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Groups from './groups';
+import { withRouter } from 'react-router-dom';
 import { logout, login } from '../../actions/session_actions';
 
-const msp = state => {
+const msp = (state, ownProps) => {
     return {
-        currentUser: state.session.currentUser
-
-    }
+        currentUser: state.session.currentUser,
+        pathname: ownProps.location.pathname
+    };
 };
 
 const mdp = dispatch => {
@@ -17,4 +18,4 @@ const mdp = dispatch => {
     };
 };
 
-export default connect(msp, mdp)(Groups);
+export default withRouter(connect(msp, mdp)(Groups));

@@ -2,10 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class Footer extends React.Component {
+
     render () {
+        let nofooter;
+        if (this.props.pathname === '/register') {
+            nofooter = 'nofooter';
+        } else if (this.props.pathname === '/login') {
+            nofooter = 'nofooter';
+        } else {
+            nofooter = 'footer';
+        }
 
         return (
-            <div className="footer">
+            <div id={nofooter}>
                 <div className="footer-box1">
                     <a href="https://github.com/robinbshrestha"><i className="fab fa-github"></i></a>
                 </div>

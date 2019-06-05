@@ -2,32 +2,31 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class Groups extends React.Component {
-    constructor(props) {
-        super(props);
-
-    }
 
     render() {
+        let nogroups;
+        if (this.props.pathname !== '/meetup') {
+            nogroups = "nogroups";
+        } else {
+            nogroups = "groups";
+        }
 
-        const loggedin = () => (
-            <div className="groups">
+
+      return (
+            <div id={nogroups}>
                 <div className="groups-grid1">
                     <div className="grid1-box1">
-                        groups go here
+                        <text className="text1">The New York Python Meetup Group</text>
                     </div>
                 </div>
                 <div className="groups-grid2">
-                    more groups
+                    <text className="text1">Full Stack Coding</text>
                 </div>
                 <div className="groups-grid3">
-                    groups
+                    <text className="text1">NYC Indie Film Collective</text>
                 </div>
             </div>
         )
-
-        return this.props.currentUser ? loggedin() : null;
-
-
 
 
     }

@@ -2,15 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class Events extends React.Component {
-    constructor(props){
-        super(props);
-
-    }
-
     render() {
+        let noevents;
+        if (this.props.pathname !== '/meetup') {
+            noevents = "noevents";
+        } else {
+            noevents = "events";
+        }
 
         const loggedin = () => (
-            <div className="events">
+            <div className={noevents}>
                 <div className="events-grid1">
                     <div className="grid1-box1">
                         events go here
