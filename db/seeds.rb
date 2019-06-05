@@ -19,4 +19,4 @@ group1 = Group.create!(
     organizer_id: demo.id
 )
 
-group1.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo1.jpeg'), filename:'photo1.jpg')
+group1.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo1.jpeg'), filename:'photo1.jpeg')
