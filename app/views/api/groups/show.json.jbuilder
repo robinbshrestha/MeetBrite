@@ -8,3 +8,9 @@ json.user do
       json.photo url_for(@group.organizer.photo)
     end
 end
+
+if current_user
+   json.current_user do
+      json.extract! current_user, :id 
+   end
+end
