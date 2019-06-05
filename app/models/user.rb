@@ -8,6 +8,8 @@ class User < ApplicationRecord
     foreign_key: :organizer_id,
     class_name: 'Group'
 
+    has_one_attached :photo
+
     after_initialize :ensure_session_token
     attr_reader :password
 

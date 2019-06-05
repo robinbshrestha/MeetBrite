@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
+
+
 demo = User.create!(name: 'Demo', email: 'demo@gmail.com', password: 'demo12345', location_id: 1)
 
 group1 = Group.create!(
@@ -14,3 +17,5 @@ group1 = Group.create!(
     location_id: 1,
     creator_id: demo.id
 )
+
+group1.photo.attach(io: open(https://meetbrite-seeds.s3.amazonaws.com/photo1.jpeg), filename:'photo1.jpg')
