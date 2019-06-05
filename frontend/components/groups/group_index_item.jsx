@@ -15,6 +15,7 @@ const GroupIndexItem = props => {
         </Link>
             {photo}
         </div>
+        
     )
 }
 
