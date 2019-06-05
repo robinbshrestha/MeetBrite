@@ -7,7 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'open-uri'
-
+User.destroy_all
+Group.destroy_all
 
 demo = User.create!(name: 'Demo', email: 'demo@gmail.com', password: 'demo12345', location_id: 1)
 
@@ -15,7 +16,7 @@ group1 = Group.create!(
     title: 'NYC Python Coding Group',
     description: 'Learn Python!',
     location_id: 1,
-    creator_id: demo.id
+    creator_id: demo1.id
 )
 
 group1.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo1.jpeg'), filename:'photo1.jpg')
