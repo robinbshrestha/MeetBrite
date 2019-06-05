@@ -22,21 +22,12 @@ class Groups extends React.Component {
             group={group} />)
 
       return (
-            <div id="groups">
+            <div className="box-container">
                     Your Groups
-                    <ul>
-                  <li>{groups}</li>
+                <div>
+                  <ul className="groups-grid">
+                        {groups}
                     </ul>
-                <div className="groups-grid1">
-                    <div className="grid1-box1">
-                        adfsfdsa
-                    </div>
-                </div>
-                <div className="groups-grid2">
-                    <text className="text1">Full Stack Coding</text>
-                </div>
-                <div className="groups-grid3">
-                    <text className="text1">NYC Indie Film Collective</text>
                 </div>
             </div>
         )
