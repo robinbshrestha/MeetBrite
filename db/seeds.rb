@@ -7,3 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 demo = User.create!(name: 'Demo', email: 'demo@gmail.com', password: 'demo12345', location_id: 1)
+
+group1 = Group.create!(
+    title: 'NYC Python Coding Group',
+    description: 'Learn Python!',
+    location_id: 1,
+    creator_id: demo.id
+)

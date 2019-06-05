@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import GroupIndexItem from './group_index_item';
 
 class Groups extends React.Component {
+    componentDidMount() {
+        this.props.fetchGroups();
+    }
+
 
     render() {
         let nogroups;
@@ -11,12 +16,20 @@ class Groups extends React.Component {
             nogroups = "groups";
         }
 
+        let groups = this.props.groups.map(group =>
+            <GroupIndexItem
+            key={group.id}
+            group={group} />)
 
       return (
-            <div id={nogroups}>
+            <div id="groups">
+                    Your Groups
+                    <ul>
+                  <li>{groups}</li>
+                    </ul>
                 <div className="groups-grid1">
                     <div className="grid1-box1">
-                        <text className="text1">The New York Python Meetup Group</text>
+                        adfsfdsa
                     </div>
                 </div>
                 <div className="groups-grid2">

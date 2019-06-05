@@ -22,9 +22,10 @@ const App = () => (
             
             <Route exact path="/" component={Index} />
             <ProtectedRoute path="/meetup" component={Meetup} />
+            <Route path="/meetup" component={GroupsContainer} />
             <AuthRoute path="/login" component={LoginFormContainer} />
             <Route path="/create" component={CreateContainer} />
-            <GroupsContainer/>
+            {/* <GroupsContainer/> */}
             <FooterContainer/>
 
         </header>

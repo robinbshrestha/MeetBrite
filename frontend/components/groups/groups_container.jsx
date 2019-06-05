@@ -3,18 +3,21 @@ import { connect } from 'react-redux';
 import Groups from './groups';
 import { withRouter } from 'react-router-dom';
 import { logout, login } from '../../actions/session_actions';
+import { fetchGroups } from '../../actions/group_actions';
 
 const msp = (state, ownProps) => {
     return {
         currentUser: state.session.currentUser,
-        pathname: ownProps.location.pathname
+        pathname: ownProps.location.pathname,
+        groups: Object.values(state.entities.groups)
     };
 };
 
 const mdp = dispatch => {
     return {
         logout: () => dispatch(logout()),
-        login: user => dispatch(login(user))
+        login: user => dispatch(login(user)),
+        fetchGroups: () => dispatch(fetchGroups()),
     };
 };
 
