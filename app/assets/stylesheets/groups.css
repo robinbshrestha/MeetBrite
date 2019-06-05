@@ -19,10 +19,17 @@
 }  
 
 .grid-group{
-  position: relative;
+    width: 200px;
+    height: 120px;
+  /* position: relative;
   height: 180px;
   border: 1px solid gray;
-  border-radius: 3px;
+  border-radius: 3px; */
+}
+
+.grid-img{
+    width: 100%;
+    height: auto
 }
 
 /* 
