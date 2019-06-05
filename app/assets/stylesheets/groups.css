@@ -18,6 +18,12 @@
     grid-gap: 20px;
 }  
 
+.grid-group{
+  position: relative;
+  height: 180px;
+  border: 1px solid $light-mid-grey;
+  border-radius: 3px;
+}
 
 /* 
 .groups-grid1 {
