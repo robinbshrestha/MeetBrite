@@ -9,7 +9,7 @@ const msp = (state, ownProps) => {
     return {
         currentUser: state.session.currentUser,
         pathname: ownProps.location.pathname,
-        groups: Object.values(state.session.groups)
+        groups: Object.values(state.entities.groups)
     };
 };
 
