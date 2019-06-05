@@ -38,7 +38,7 @@ class Navbar extends React.Component {
                             <Link to="/" className="logo">MeetBrite</Link>
                         </div>
                         <div className="nav-bar-right">
-                            <Link to="/" className="group">Start a new group</Link>
+                            <Link to="/create" className="group">Start a new group</Link>
                             <Link to="/login" className="nav">Log in</Link>
                             <Link to="/register" className="nav">Sign up</Link>
                         </div>
@@ -55,7 +55,7 @@ class Navbar extends React.Component {
                             <Link to="/" className="loglogo">MeetBrite</Link>
                         </div>
                         <div className="lognav-bar-right">
-                            <Link to="/" className="loggroup">Start a new group</Link>
+                            <Link to="/create" className="loggroup">Start a new group</Link>
                             <Link to="/meetup" className="lognav">Explore</Link>
                             <Link to="/meetup" className="lognav">Messages</Link>
                             <Link to="/meetup" className="lognav">Notifications</Link>

@@ -8,6 +8,7 @@ import { Route } from 'react-router-dom';
 import FooterContainer from './footer/footer_container';
 import EventsContainer from './events/events_container';
 import GroupsContainer from './groups/groups_container';
+import CreateContainer from './groups/create_container';
 import { 
     AuthRoute,
     ProtectedRoute
@@ -22,6 +23,7 @@ const App = () => (
             <Route exact path="/" component={Index} />
             <ProtectedRoute path="/meetup" component={Meetup} />
             <AuthRoute path="/login" component={LoginFormContainer} />
+            <Route path="/create" component={CreateContainer} />
             <GroupsContainer/>
             <FooterContainer/>
 
