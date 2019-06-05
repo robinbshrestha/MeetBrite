@@ -19,4 +19,44 @@ group1 = Group.create!(
     organizer_id: demo.id
 )
 
-group1.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo1.jpeg'), filename:'photo1.jpeg')
+group2 = Group.create!(
+    title: 'NYC Python Coding Group',
+    description: 'Learn Python!',
+    location_id: 1,
+    organizer_id: demo.id
+)
+
+group3 = Group.create!(
+    title: 'NYC Python Coding Group',
+    description: 'Learn Python!',
+    location_id: 1,
+    organizer_id: demo.id
+)
+
+group4 = Group.create!(
+    title: 'NYC Python Coding Group',
+    description: 'Learn Python!',
+    location_id: 1,
+    organizer_id: demo.id
+)
+
+group5 = Group.create!(
+    title: 'NYC Python Coding Group',
+    description: 'Learn Python!',
+    location_id: 1,
+    organizer_id: demo.id
+)
+
+group6 = Group.create!(
+    title: 'NYC Python Coding Group',
+    description: 'Learn Python!',
+    location_id: 1,
+    organizer_id: demo.id
+)
+
+group1.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo2.jpg'), filename:'photo2.jpg')
+group2.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo2.jpg'), filename:'photo2.jpg')
+group3.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo2.jpg'), filename:'photo2.jpg')
+group4.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo2.jpg'), filename:'photo2.jpg')
+group5.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo2.jpg'), filename:'photo2.jpg')
+group6.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo2.jpg'), filename:'photo2.jpg')
