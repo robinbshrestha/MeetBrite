@@ -42,3 +42,18 @@
   top: 20px;
 
 }
+
+.show-city, #show-icon, #show-people, .show-mem, #show-user, .show-user{ 
+  font-size: 12px;
+  position: relative;
+  bottom: 20px;
+}
+
+.show-city, .show-user{
+  left: 5px;
+}
+
+#show-people{
+  right: 3px;
+}
+

@@ -23,6 +23,16 @@ class GroupShow extends React.Component {
                     </div>
                     <div className='show-text'>
                         <h1>{this.props.group.title}</h1>
+                        <i id="show-icon" className="fas fa-map-marker-alt"></i>
+                            <label className="show-city">New York, NY</label>
+                        <div> 
+                        <i id="show-people" className="fas fa-users"></i>
+                            <label className="show-mem">232 members</label>
+                        </div>
+                        <div>
+                            <i id="show-user" class="fa fa-user" aria-hidden="true"></i>
+                            <label className="show-user">Organized by Demo User</label>
+                        </div>
                     </div>
                 </div>
 
@@ -30,8 +40,11 @@ class GroupShow extends React.Component {
                     <h1 className='show-description'>
                         What we are about
                     </h1>
-                    <div >
+                    <div>
                         <div className='show-description'>{this.props.group.description}</div>
+                        <div className='show-location'> </div>
+
+                        
                     </div>
                 </div>
                 
