@@ -13,12 +13,10 @@
     background-color: #fafafa;
     display: grid;
     grid-template-columns: 33% 33% 34%;
-    grid-template-rows: auto;
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     grid-gap: 20px;
     overflow: hidden;
-   
 }  
 
 .grid-text {
@@ -26,11 +24,10 @@
     top: 200px;
 }
 
-.grid-group {
- border: solid 1px gray;
- height: 180px;
- width: 310px;
- overflow: hidden;
+.grid-group img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
 }
 
 
