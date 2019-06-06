@@ -22,6 +22,7 @@
   /* right: 200px; */
   height: auto;
   border-radius: 3px;
+ 
 }
 
 .show-bottom {
@@ -30,4 +31,14 @@
   width: 50%;
   position: relative;
   left: 20px;
+  height: 300px;
+  top: 50px;
+
+}
+
+.show-photo{
+  display: flex;
+  position: relative;
+  top: 20px;
+
 }
