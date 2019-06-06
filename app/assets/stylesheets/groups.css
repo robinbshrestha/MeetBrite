@@ -12,7 +12,7 @@
 .groups-grid{
     background-color: #fafafa;
     display: grid;
-    grid-template-columns: 33% 33% 34%;
+    grid-template-columns: 33% 33% 33%;
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     grid-gap: 20px;

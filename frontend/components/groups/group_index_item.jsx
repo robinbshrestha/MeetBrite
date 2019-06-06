@@ -11,8 +11,8 @@ const GroupIndexItem = props => {
         <Link to={`/groups/${props.group.id}`}>
             <h3 className="grid-text">{props.group.title}</h3>
         </Link>
-            {/* <div className='grid-group'>{photo}</div> */}
-            <div className='grid-group'><img src="https://meetbrite-seeds.s3.amazonaws.com/photo3.png"/></div>
+            <div className='grid-group'>{photo}</div>
+            {/* <div className='grid-group'><img src="https://meetbrite-seeds.s3.amazonaws.com/photo3.png"/></div> */}
         </div>
         
     )
