@@ -55,8 +55,8 @@ group6 = Group.create!(
 )
 
 group1.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo2.jpg'), filename:'photo2.jpg')
-group2.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo1.jpeg'), filename:'photo1.jpeg')
+group2.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo3.png'), filename:'photo3.png')
 group3.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo2.jpg'), filename:'photo2.jpg')
-group4.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo2.jpg'), filename:'photo2.jpg')
+group4.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo3.png'), filename:'photo3.png')
 group5.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo2.jpg'), filename:'photo2.jpg')
-group6.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo2.jpg'), filename:'photo2.jpg')
+group6.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo3.png'), filename:'photo3.png')
