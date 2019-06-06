@@ -57,3 +57,20 @@
   right: 3px;
 }
 
+
+a.link-join:link, a.link-join:visited {
+  background-color: #ED1C40;
+  color: white;
+  padding: 8px 17px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.link-join:hover, a.link-join:active {
+  background-color: #d01031;
+}
+
+a.link-join {
+    border-radius: 3px;
+}
