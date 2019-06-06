@@ -10,7 +10,7 @@ const GroupIndexItem = props => {
     return (
         <div>
         <Link to={`/groups/${props.group.id}`}>
-            <h3>{props.group.title}</h3>
+            <h3 className="grid-text">{props.group.title}</h3>
         </Link>
             <div className='grid-group'>{photo}</div>
             
