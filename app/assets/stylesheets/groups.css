@@ -21,13 +21,23 @@
 
 .grid-text {
     position: relative;
-    top: 200px;
+    top: 250px;
+    z-index: 1;
+}
+
+.grid-link-text {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
 }
 
 .grid-group img {
   max-width: 100%;
-  height: auto;
+  height: 250px;
   border-radius: 3px;
+  filter: brightness(75%);
 }
 
 
