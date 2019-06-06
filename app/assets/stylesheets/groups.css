@@ -46,7 +46,7 @@
 }
 
 .grid-group img {
-  max-width: 100%;
+  max-width: 320px;
   height: 180px;
   border-radius: 3px;
   filter: brightness(65%);
