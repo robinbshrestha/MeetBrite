@@ -1,0 +1,29 @@
+.show-all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid gray;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e5e7e9;
+}
+
+.show-top {
+  display: flex;
+  height: 380px;
+  padding: 20 0 20 100;
+}
+
+.show-top > div {
+  padding: 0px 20px;
+}
+
+.group-photo > img {
+  width: 600px;
+  position: relative;
+  right: 200px;
+  height: auto;
+  border-radius: 3px;
+  
+
+  
+}

@@ -10,19 +10,31 @@ class GroupShow extends React.Component {
         let photo;
 
         if (this.props.group && this.props.group.photo) {
-            photo = <div id='group-photo'><img src={this.props.group.photo} /></div>
+            photo = <div className='group-photo'><img src={this.props.group.photo} /></div>
+        } else {
+            photo = <div className='group-photo'><img src="https://meetbrite-seeds.s3.amazonaws.com/photo4.jpg" /></div>
         }
         
         return (
             <div className='show-all'>
                 <div className='show-top'>
-                    <div>
+                    <div className='show-photo'>
                         {photo}
                     </div>
                     <div className='show-text'>
                         <h1>{this.props.group.title}</h1>
                     </div>
                 </div>
+
+                <div className='show-bottom'>
+                    <h1 className='show-what'>
+                        What we are about
+                    </h1>
+                    <div className='show-description'>
+                        <div>{this.props.group.description}</div>
+                    </div>
+                </div>
+                
             </div>
         )
     }

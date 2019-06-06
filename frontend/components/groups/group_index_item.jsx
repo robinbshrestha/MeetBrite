@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+
 const GroupIndexItem = props => {
     let photo;
     if (props.group.photo) {
