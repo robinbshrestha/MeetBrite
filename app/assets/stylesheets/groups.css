@@ -8,20 +8,32 @@
     align-items: center;
     background-color: #fafafa;
 
+
+}
+
+.box-con-text {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    position: relative;
+    right: 375px;
+    top: 35px;
 }
 .groups-grid{
     background-color: #fafafa;
     display: grid;
     grid-template-columns: 33% 33% 33%;
+    margin-right: 40px;
+    margin-top: 0px;
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    grid-gap: 20px;
+    grid-gap: 0px 9px;
     overflow: hidden;
 }  
 
 .grid-text {
     position: relative;
-    top: 250px;
+    top: 175px;
     z-index: 1;
 }
 
@@ -30,14 +42,14 @@
     color: white;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 16px;
 }
 
 .grid-group img {
   max-width: 100%;
-  height: 250px;
+  height: 180px;
   border-radius: 3px;
-  filter: brightness(75%);
+  filter: brightness(65%);
 }
 
 

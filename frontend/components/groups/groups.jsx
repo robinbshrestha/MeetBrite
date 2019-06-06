@@ -23,7 +23,7 @@ class Groups extends React.Component {
 
       return (
             <div className="box-container">
-                    Your Groups
+              <div className="box-con-text">Your Groups</div>
                 <div>
                   <ul className="groups-grid">
                         {groups}
