@@ -200,3 +200,22 @@ a.signin-link {
     font-size: 18px;
 }
 
+.sign-box3 > .sign-change {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #2e25cc;
+
+}
+.signin-blue {
+     color: #2e25cc;
+}
+
+
+a.signup-login:link, a.signup-login:visited {
+    text-decoration: none;
+    color: #2e25cc;
+}
+a.signup-login:hover, a.signup-login:active {
+   text-decoration: underline
+}
+

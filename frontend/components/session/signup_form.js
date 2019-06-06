@@ -86,13 +86,13 @@ class Signup extends React.Component {
                 </form>
                     <div className="sign-box3">
                         <i className="fas fa-map-marker-alt"></i>
-                            <label>New York, NY</label>
+                        <label>New York, NY</label>  <label className="sign-change">(change)</label>
                         <div className="signin-public"> Your name is public. We'll use your email address to send you updates, and your location to find Meetups near you. </div>    
                         <div className="signin-div"><Link className="signin-link" onClick={this.handleSubmit}>Continue</Link></div>
-                        <div className="signin-pos"> When you "Continue", you agree to Meetup's Terms of Service. We will manage information about you as described in our Privacy Policy, and Cookie Policy. </div>  
+                        <div className="signin-pos"> When you "Continue", you agree to Meetup's <Link className="signup-login">Terms of Service.</Link> We will manage information about you as described in our <Link className="signup-login">Privacy Policy</Link>, and <Link className="signup-login">Cookie Policy.</Link> </div>  
                        
                     </div>
-                    <div className="already"> Already a member? Log in. </div>
+                    <div className="already"> Already a member? <Link className="signup-login" to="/login">Log In</Link> </div>
                 </div>
             </div>
         )
