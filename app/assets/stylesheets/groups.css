@@ -14,7 +14,7 @@
     display: grid;
     grid-template-columns: 33% 33% 34%;
     grid-template-rows: auto;
-    height: 600px;
+    height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     grid-gap: 20px;
    
