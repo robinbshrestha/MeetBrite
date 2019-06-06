@@ -27,11 +27,11 @@ class GroupShow extends React.Component {
                 </div>
 
                 <div className='show-bottom'>
-                    <h1 className='show-what'>
+                    <h1 className='show-description'>
                         What we are about
                     </h1>
-                    <div className='show-description'>
-                        <div>{this.props.group.description}</div>
+                    <div >
+                        <div className='show-description'>{this.props.group.description}</div>
                     </div>
                 </div>
                 
