@@ -16,9 +16,14 @@
     display: block;
     color: white;
     padding: 20px;
+    position: relative;
+    top: 30px
 }
 
 .mu-find-text > div {
     color: #afc4cc;
     font-size: 20px;
+    position: relative;
+    top: 30px
+
 }

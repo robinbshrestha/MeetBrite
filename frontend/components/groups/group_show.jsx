@@ -12,7 +12,7 @@ class GroupShow extends React.Component {
         if (this.props.group && this.props.group.photo) {
             photo = <div className='group-photo'><img src={this.props.group.photo} /></div>
         } else {
-            photo = <div className='group-photo'><img src="https://meetbrite-seeds.s3.amazonaws.com/photo4.jpg" /></div>
+            photo = <div className='group-photo'><img src="https://meetbrite-seeds.s3.amazonaws.com/photo9.jpg" /></div>
         }
         
         return (
