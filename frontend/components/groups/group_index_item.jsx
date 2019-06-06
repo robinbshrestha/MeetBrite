@@ -5,7 +5,7 @@ const GroupIndexItem = props => {
     let photo;
     if (props.group.photo) {
         photo = <img src={props.group.photo} />;
-    } else { photo = <img src="https://meetbrite-seeds.s3.amazonaws.com/photo4.jpg" />
+    } else { photo = <img src="https://meetbrite-seeds.s3.amazonaws.com/photo9.jpg" />
 
     }
 
