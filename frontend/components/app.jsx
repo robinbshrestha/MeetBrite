@@ -9,6 +9,7 @@ import FooterContainer from './footer/footer_container';
 import EventsContainer from './events/events_container';
 import GroupsContainer from './groups/groups_container';
 import CreateContainer from './groups/create_container';
+import GroupShowContainer from './groups/group_show_container';
 import { 
     AuthRoute,
     ProtectedRoute
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="/meetup" component={GroupsContainer} />
             <AuthRoute path="/login" component={LoginFormContainer} />
             <Route path="/create" component={CreateContainer} />
+            <Route exact path='/groups/:groupId/' component={GroupShowContainer} />
             {/* <GroupsContainer/> */}
             <FooterContainer/>
 
