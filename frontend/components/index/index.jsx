@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default () => (
+<div>
 <div className="video-container">
     <video id="video" autoPlay loop muted>
         <source src="https://www.meetup.com/mu_static/en-US/video.dddafbfe.mp4" type="video/mp4" />
@@ -14,4 +15,17 @@ export default () => (
         </span>
     </div>
 </div>
+    <div className="index-bottom"> 
+        <div><Link className="index-link">Join a Movement</Link></div>
+        <div><Link className="index-link">Learn to Cook</Link></div>
+        <div><Link className="index-link">Train for a marathon</Link></div>
+        <div><Link className="index-link">Practice a Language</Link></div>
+        <div><Link className="index-link">Hike a mountain</Link></div>
+        <div><Link className="index-link">Build a mobile app</Link></div>
+    </div>
+        <div className="index-border">
+            
+        </div>
+</div>       
+
 )
