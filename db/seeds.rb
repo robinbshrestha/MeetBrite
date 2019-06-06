@@ -54,9 +54,9 @@ group6 = Group.create!(
     organizer_id: demo.id
 )
 
-group1.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo2.jpg'), filename:'photo2.jpg')
-group2.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo3.png'), filename:'photo3.png')
-group3.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo2.jpg'), filename:'photo2.jpg')
-group4.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo3.png'), filename:'photo3.png')
-group5.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo2.jpg'), filename:'photo2.jpg')
+group1.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo3.png'), filename:'photo3.png')
+group2.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo4.jpg'), filename:'photo4.jpg')
+group3.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo6.jpeg'), filename:'photo6.jpeg')
+group4.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo4.jpg'), filename:'photo4.jpg')
+group5.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo6.jpeg'), filename:'photo6.jpeg')
 group6.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo3.png'), filename:'photo3.png')
