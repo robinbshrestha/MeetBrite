@@ -82,7 +82,7 @@ a.index-link:link, a.index-link:visited {
 }
 
 a.index-link:hover, a.index-link:active {
-  background-color: #d01031;
+  border-color: #585858;
 }
 
 a.index-link {
