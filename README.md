@@ -1,8 +1,10 @@
  <img src= "https://meetbrite-seeds.s3.amazonaws.com/screenshot1.png"/> 
  
- <a href="https://eventbrite2019.herokuapp.com/" target="_blank">Link to my site!</a>
+
 
 MeetBrite is a web-app clone of http://www.meetup.com, a platform for users  to discover, join, and create groups based on specific interests in their area.
+
+<a href="https://eventbrite2019.herokuapp.com/" target="_blank">Link to my site!</a>
 
 <img src= "https://meetbrite-seeds.s3.amazonaws.com/screenshot2.png"/>
 
