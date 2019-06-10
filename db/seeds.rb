@@ -11,6 +11,7 @@ User.destroy_all
 Group.destroy_all
 
 demo = User.create!(name: 'Demo', email: 'demo@gmail.com', password: 'demo12345', location_id: 1)
+user1 = User.create!(name: 'Robin', email: 'robin@hotmail.com', password: 'starwars', location_id: 1)
 
 group1 = Group.create!(
     title: 'The Product Group',
@@ -56,9 +57,14 @@ group6 = Group.create!(
     organizer_id: demo.id
 )
 
-group1.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo10.jpg'), filename:'photo10.png')
+group1.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo10.jpg'), filename:'photo10.jpg')
 group2.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo4.jpg'), filename:'photo4.jpg')
 group3.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo6.jpeg'), filename:'photo6.jpeg')
 group4.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo11.jpg'), filename:'photo11.jpg')
 group5.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo6.jpeg'), filename:'photo6.jpeg')
 group6.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo10.jpg'), filename:'photo10.jpg')
+
+Membership.create!(
+    user_id: demo.id,
+    group_id: user1.id
+)

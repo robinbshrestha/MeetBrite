@@ -8,6 +8,10 @@ class User < ApplicationRecord
     foreign_key: :organizer_id,
     class_name: 'Group'
 
+    has_many :memberships,
+    foreign_key: :user_id,
+    class_name: 'Membership'
+
     has_one_attached :photo
 
     after_initialize :ensure_session_token
