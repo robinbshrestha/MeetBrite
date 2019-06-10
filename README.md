@@ -1,24 +1,55 @@
-# README
+ <img src= "https://meetbrite-seeds.s3.amazonaws.com/screenshot1.png"/> 
+ 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+MeetBrite is a web-app clone of http://www.meetup.com, a platform for users  to discover, join, and create groups based on specific interests in their area.
 
-* Ruby version
+<a href="https://eventbrite2019.herokuapp.com/" target="_blank">Link to my site!</a>
 
-* System dependencies
+<img src= "https://meetbrite-seeds.s3.amazonaws.com/screenshot2.png"/>
 
-* Configuration
+## Technologies Used
+MeetBrite was developed with a Ruby on Rails backend, a PostgreSQL database and is hosted on Heroku.  The backend provides RESTful API's and responds with JSON data.  The front end was modeled with React and Redux and implements styling from CSS.
 
-* Database creation
+In addition, this website employed Jbuilder, NodeJs, JQuery to make AJAX requests, Node Package Manager (npm), webpack, React DOM, React Router, React History for browser history manipulation, and AWS for cloud hosting.
 
-* Database initialization
+## Features
+Users can create an account and log in securely (with bcrypt) with custom error handling.  Once logged in, the user has access to a generalized index of created groups and can create a custom group for other users to view. 
 
-* How to run the test suite
+<img src= "https://meetbrite-seeds.s3.amazonaws.com/screenshot4.png"/>
+<img src= "https://meetbrite-seeds.s3.amazonaws.com/screenshot5.png"/>
 
-* Services (job queues, cache servers, search engines, etc.)
+## Code Snippets
+Utilization of protected and authenticated routes with React Router.  This allows the developer to dictate user access depending on their login state.
+```
+const App = () => (
+    <div>
+        <header>
+            <NavbarContainer/>
+            <AuthRoute path="/register" component={SignupFormContainer} />
+            <Route exact path="/" component={Index} />
+            <ProtectedRoute path="/meetup" component={Meetup} />
+            <Route path="/meetup" component={GroupsContainer} />
+            <AuthRoute path="/login" component={LoginFormContainer} />
+            <Route path="/create" component={CreateContainer} />
+            <Route exact path='/groups/:groupId/' component={GroupShowContainer} />
+            <FooterContainer/>
+        </header>
+    </div>
+);
+```
 
-* Deployment instructions
+Below displays how the developer can redirect users based on where they are on the webpage with the Redux history property.  In this example, the user is redirected to the group index page upon submission of a newly created group, thus allowing the user to see the new group they have created.
 
-* ...
+```
+handleSubmit(e) {
+   e.preventDefault();
+   this.props.createGroup(this.state)
+  .then( () => this.props.history.push('/meetup'));
+}
+
+```
+## Future Implementations
+* Users joining and leaving groups
+* Users creating, editing, and deleting events
+* Users can RSVP to events in their groups 
