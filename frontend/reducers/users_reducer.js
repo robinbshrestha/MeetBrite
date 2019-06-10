@@ -7,10 +7,10 @@ const usersReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
             return merge({}, state, { [action.currentUser.id]: action.currentUser});
-        case RECEIVE_GROUP:
-            const newState = merge({}, state, { [action.user.id]: action.user });
-            newState[action.current_user.id].group_memberships = action.current_user.group_memberships;
-            return newState;
+        // case RECEIVE_GROUP:
+        //     const newState = merge({}, state, { [action.user.id]: action.user });
+        //     newState[action.current_user.id].group_memberships = action.current_user.group_memberships;
+        //     return newState;
         default:
             return state;
     }

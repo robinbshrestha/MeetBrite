@@ -3,10 +3,10 @@ json.extract! group, :id, :organizer_id, :description, :location_id, :title
         json.photo url_for(group.photo)
     end
 
-members = []
+# members = []
 
-group.members.each do |member|
-  members.push(member.id)
-end 
+# group.members.each do |member|
+#   members.push(member.id)
+# end 
 
-json.members members
+# json.members members

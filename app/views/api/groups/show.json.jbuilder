@@ -12,6 +12,6 @@ end
 if current_user
    json.current_user do
       json.extract! current_user, :id 
-      json.group_memberships current_user.group_membership_ids
+      # json.group_memberships current_user.group_membership_ids
    end
 end

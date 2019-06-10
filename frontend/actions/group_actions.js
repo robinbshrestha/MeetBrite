@@ -26,13 +26,13 @@ const removeGroup = groupId => {
     };
 };
 
-export const createMembership = groupId => dispatch => {
-    return MembershipApiUtil.createMembership(groupId).then(group => dispatch(receiveGroup(group)));
-};
+// export const createMembership = groupId => dispatch => {
+//     return MembershipApiUtil.createMembership(groupId).then(group => dispatch(receiveGroup(group)));
+// };
 
-export const deleteMembership = groupId => dispatch => {
-    return MembershipApiUtil.deleteMembership(groupId).then(group => dispatch(receiveGroup(group)));
-};
+// export const deleteMembership = groupId => dispatch => {
+//     return MembershipApiUtil.deleteMembership(groupId).then(group => dispatch(receiveGroup(group)));
+// };
 
 export const fetchGroups = () => dispatch => (
     GroupApiUtil.fetchGroups().then(groups => dispatch(receiveGroups(groups)))
