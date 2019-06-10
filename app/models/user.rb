@@ -3,16 +3,33 @@ class User < ApplicationRecord
     validates :email, uniqueness: true
     validates :password, length: { minimum: 6, allow_nil: true }
 
-    has_many :groups,
-    primary_key: :id,
-    foreign_key: :organizer_id,
-    class_name: 'Group'
+    # has_many :groups,
+    # primary_key: :id,
+    # foreign_key: :organizer_id,
+    # class_name: 'Group'
 
-    has_many :memberships,
-    foreign_key: :user_id,
-    class_name: 'Membership'
+    # has_many :memberships,
+    # foreign_key: :user_id,
+    # class_name: 'Membership'
+
+    # has_many :group_memberships,
+    # through: :memberships,
+    # source: :group
+    
+
+    # has_one_attached :photo
 
     has_one_attached :photo
+    has_many :memberships
+
+    has_many :group_memberships,
+        through: :memberships,
+        source: :group
+
+    has_many :groups,
+        foreign_key: :creator_id,
+        primary_key: :id,
+        class_name: 'Group'
 
     after_initialize :ensure_session_token
     attr_reader :password
