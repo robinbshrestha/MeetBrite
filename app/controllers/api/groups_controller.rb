@@ -11,7 +11,9 @@ class Api::GroupsController < ApplicationController
         @group.organizer_id = current_user.id
 
         if @group.save
-            render :show
+            membership = Membership.new(user_id: current_user.id, group_id: @group.id);
+            membership.save 
+            render :show  
         else
             render json: @group.errors.full_messages, status: 422
         end
@@ -24,7 +26,7 @@ class Api::GroupsController < ApplicationController
    
     def update
         @group = Group.find(params[:id])
-        if @group.update(group_params)
+        if @group.update(group_params) && (@group.organizer_id == current_user.id)
             render :show 
         else
             render json: @groups.errors.full_messages, status: 422
@@ -32,14 +34,19 @@ class Api::GroupsController < ApplicationController
       
     end
 
+
     def destroy
         @group = Group.find(params[:id])
+        group.delete if group.creator_id == current_user.id
+        @groups = Group.all
+        render :index
+        
+        # if @group.destroy
+        #     render :show
+        # else
+        #     render json: @groups.errors.full_messages, status: 422
+        # end
 
-        if @group.destroy
-            render :show
-        else
-            render json: @groups.errors.full_messages, status: 422
-        end
     end
 
     private
