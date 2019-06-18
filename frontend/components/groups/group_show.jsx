@@ -30,7 +30,7 @@ class GroupShow extends React.Component {
                             <label className="show-mem">232 members</label>
                         </div>
                         <div>
-                            <i id="show-user" class="fa fa-user" aria-hidden="true"></i>
+                            <i id="show-user" className="fa fa-user" aria-hidden="true"></i>
                             <label className="show-user">Organized by Demo User</label>
                         </div>
                         <div className="show-join"><Link className="link-join" onClick={this.handleSubmit}>Join Group</Link>

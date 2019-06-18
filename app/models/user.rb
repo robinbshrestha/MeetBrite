@@ -27,7 +27,7 @@ class User < ApplicationRecord
         source: :group
 
     has_many :groups,
-        foreign_key: :creator_id,
+        foreign_key: :organizer_id,
         primary_key: :id,
         class_name: 'Group'
 

@@ -7,7 +7,9 @@ import { fetchGroups } from '../../actions/group_actions';
 
 const msp = (state, ownProps) => {
     return {
-        currentUser: state.session.currentUser,
+        // currentUser: state.session.currentUser,
+        currentUser: state.entities.users[state.session.id],
+
         pathname: ownProps.location.pathname,
         groups: Object.values(state.entities.groups)
     };

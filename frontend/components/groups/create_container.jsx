@@ -13,7 +13,9 @@ const msp = state => {
 
     return {
         group,
-        currentUser: state.session.currentUser
+        // currentUser: state.session.currentUser
+        currentUser: state.entities.users[state.session.id]
+
     };
 
 

@@ -1,4 +1,6 @@
 class Membership < ApplicationRecord
+    validates :user_id, :group_id, presence: true
+
     belongs_to :user,
     foreign_key: :user_id,
     class_name: 'User'
@@ -7,8 +9,8 @@ class Membership < ApplicationRecord
     foreign_key: :group_id,
     class_name: 'Group'
 
-    has_many :memberships,
-    through: :user_memberships,
-    source: 'User'
+    # has_many :memberships,
+    # through: :user_memberships,
+    # source: 'User'
 
 end

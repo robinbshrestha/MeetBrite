@@ -6,7 +6,8 @@ import { logout, login } from '../../actions/session_actions';
 
 const msp = (state, ownProps) => {
     return {
-        currentUser: state.session.currentUser,
+        // currentUser: state.session.currentUser,
+        currentUser: state.entities.users[state.session.id],
         pathname: ownProps.location.pathname
     };
 };
