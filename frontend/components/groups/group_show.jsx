@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class GroupShow extends React.Component {
     componentDidMount() {
@@ -32,7 +32,7 @@ class GroupShow extends React.Component {
         } else {
             photo = <div className='group-photo'><img src="https://meetbrite-seeds.s3.amazonaws.com/photo9.jpg" /></div>
         }
-        
+
         return (
             <div className='show-all'>
                 <div className='show-top'>
@@ -42,17 +42,17 @@ class GroupShow extends React.Component {
                     <div className='show-text'>
                         <h1>{this.props.group.title}</h1>
                         <i id="show-icon" className="fas fa-map-marker-alt"></i>
-                            <label className="show-city">New York, NY</label>
-                        <div> 
-                        <i id="show-people" className="fas fa-users"></i>
-                            <label className="show-mem">232 members</label>
+                        <label className="show-city">New York, NY</label>
+                        <div>
+                            <i id="show-people" className="fas fa-users"></i>
+                            <label className="show-mem">{this.props.group.members} Members</label>
                         </div>
                         <div>
                             <i id="show-user" className="fa fa-user" aria-hidden="true"></i>
-                            <label className="show-user">Organized by Demo User</label>
+                            <label className="show-user">{this.props.group.organizer_id}</label>
                         </div>
-                        <div className="show-join"><Link className="link-join" onClick={this.joinGroup}>Join Group</Link>
-                        </div>
+                        <div className="show-join"><Link className="link-join" onClick={this.joinGroup}>Join Group</Link></div>
+                        <div className="show-join"><Link className="link-join" onClick={this.leaveGroup}>Leave Group</Link></div>
                     </div>
                 </div>
 
@@ -64,10 +64,10 @@ class GroupShow extends React.Component {
                         <div className='show-description'>{this.props.group.description}</div>
                         <div className='show-location'> </div>
 
-                        
+
                     </div>
                 </div>
-                
+
             </div>
         )
     }

@@ -7,6 +7,7 @@ members = []
 
 group.members.each do |member|
   members.push(member.id)
+  # members.length
 end 
 
-json.members members
+json.members members.length
