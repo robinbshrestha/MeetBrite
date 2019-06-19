@@ -3,15 +3,18 @@ import {fetchGroup, createMembership, deleteMembership } from '../../actions/gro
 import GroupShow from './group_show';
 
 const msp = (state, ownProps) => {
-    const group = state.entities.groups[ownProps.match.params.groupId] || {};
-    const currentUser = state.entities.users[state.session.id];
-    const organizer = state.entities.users[group.organizer_id];
-
+    
     return {
-        group,
-        currentUser,
-        organizer
-    };
+        currentUser: state.session.currentUser,
+        group: state.entities.groups[ownProps.match.params.groupId] || {},
+        
+    }
+    // const users = state.entities.users; 
+    // return {
+    //     group,
+    //     currentUser,
+    //     organizer
+    // };
 };
 
 const mdp = dispatch => {

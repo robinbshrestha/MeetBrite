@@ -16,7 +16,7 @@ export const receiveGroup = ({ group, current_user }) => {
     return {
         type: RECEIVE_GROUP,
         group,
-        current_user,
+        current_user
     };
 };
 

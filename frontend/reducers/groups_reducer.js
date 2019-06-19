@@ -2,14 +2,16 @@ import { RECEIVE_GROUPS, RECEIVE_GROUP, REMOVE_GROUP } from '../actions/group_ac
 import merge from 'lodash/merge';
 
 const groupsReducer = (state = {}, action) => {
+    // debugger
     Object.freeze(state);
     let newState;
     switch (action.type) {
+        // debugger
         case RECEIVE_GROUPS:
             return action.groups;
         case RECEIVE_GROUP:
             newState = merge({}, state, { [action.group.id]: action.group });
-            // newState[action.group.id].members = action.group.members;
+            newState[action.group.id].members = action.group.members;
             return newState;
         case REMOVE_GROUP:
             newState = merge({}, state);
@@ -19,5 +21,5 @@ const groupsReducer = (state = {}, action) => {
             return state;
     }
 };
-
-export default groupsReducer;
+// debugger
+export default groupsReducer;   
