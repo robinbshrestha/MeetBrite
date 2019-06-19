@@ -12,12 +12,14 @@ const receiveGroups = groups => {
     };
 };
 
-const receiveGroup = group => {
+export const receiveGroup = ({ group, current_user }) => {
     return {
         type: RECEIVE_GROUP,
-        group
+        group,
+        current_user,
     };
 };
+
 
 const removeGroup = groupId => {
     return {

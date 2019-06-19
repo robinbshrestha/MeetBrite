@@ -4,6 +4,24 @@ import {Link} from 'react-router-dom';
 class GroupShow extends React.Component {
     componentDidMount() {
         this.props.fetchGroup(this.props.match.params.groupId);
+        this.joinGroup = this.joinGroup.bind(this);
+        this.leaveGroup = this.leaveGroup.bind(this);
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.group.id != this.props.group.id) {
+            this.props.fetchGroup(this.props.match.params.groupId);
+        }
+    }
+
+    joinGroup(e) {
+        e.preventDefault();
+        this.props.joinGroup(this.props.group.id);
+    }
+
+    leaveGroup(e) {
+        e.preventDefault();
+        this.props.leaveGroup(this.props.group.id);
     }
 
     render() {
@@ -33,7 +51,7 @@ class GroupShow extends React.Component {
                             <i id="show-user" className="fa fa-user" aria-hidden="true"></i>
                             <label className="show-user">Organized by Demo User</label>
                         </div>
-                        <div className="show-join"><Link className="link-join" onClick={this.handleSubmit}>Join Group</Link>
+                        <div className="show-join"><Link className="link-join" onClick={this.joinGroup}>Join Group</Link>
                         </div>
                     </div>
                 </div>
