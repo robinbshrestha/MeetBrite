@@ -6,9 +6,11 @@ class GroupShow extends React.Component {
         super(props)
         this.joinGroup = this.joinGroup.bind(this);
         this.leaveGroup = this.leaveGroup.bind(this);
+
     }
     componentDidMount() {
         this.props.fetchGroup(this.props.match.params.groupId);
+
     }
 
     componentDidUpdate(prevProps) {
@@ -30,11 +32,20 @@ class GroupShow extends React.Component {
     render() {
         let photo;
         let showit;
+        // if (Object.values(this.props.group).length === 0) { return null; }
+        // else if ((this.props.currentUser) && (this.props.group.members.includes(this.props.currentUser.id))) {
+        //     showit = <div className="show-join"><Link className="link-join" onClick={this.leaveGroup}>Leave Group</Link></div>
+        // } else {
+        //     showit = <div className="show-join"><Link className="link-join" onClick={this.joinGroup}>Join Group</Link></div>
+
+        // }
+
         if (Object.values(this.props.group).length === 0) { return null; }
-        else if (this.props.group.members.includes(this.props.currentUser.id)) {
-            showit = <div className="show-join"><Link className="link-join" onClick={this.leaveGroup}>Leave Group</Link></div>
+
+        if ((this.props.currentUser) && (!this.props.group.members.includes(this.props.currentUser.id))) {
+            showit = <button className="link-join" onClick={this.joinGroup}>Join Group</button>
         } else {
-            showit = <div className="show-join"><Link className="link-join" onClick={this.joinGroup}>Join Group</Link></div>
+            showit = <button className="link-join" onClick={this.leaveGroup}>Leave Group</button>
 
         }
     

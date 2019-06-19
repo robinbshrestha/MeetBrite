@@ -9,6 +9,11 @@ class Groups extends React.Component {
 
 
     render() {
+
+        if (this.props.groups.length === 0) {
+            return null;
+        }
+        
         let nogroups;
         if (this.props.pathname !== '/meetup') {
             nogroups = "nogroups";
