@@ -32,22 +32,22 @@ class GroupShow extends React.Component {
     render() {
         let photo;
         let showit;
-        // if (Object.values(this.props.group).length === 0) { return null; }
-        // else if ((this.props.currentUser) && (this.props.group.members.includes(this.props.currentUser.id))) {
-        //     showit = <div className="show-join"><Link className="link-join" onClick={this.leaveGroup}>Leave Group</Link></div>
-        // } else {
-        //     showit = <div className="show-join"><Link className="link-join" onClick={this.joinGroup}>Join Group</Link></div>
-
-        // }
-
         if (Object.values(this.props.group).length === 0) { return null; }
-
-        if ((this.props.currentUser) && (!this.props.group.members.includes(this.props.currentUser.id))) {
-            showit = <button className="link-join" onClick={this.joinGroup}>Join Group</button>
+        else if ((this.props.currentUser) && (!this.props.group.members.includes(this.props.currentUser.id))) {
+            showit = <Link className="link-join" onClick={this.joinGroup}>Join Group</Link>
         } else {
-            showit = <button className="link-join" onClick={this.leaveGroup}>Leave Group</button>
+            showit = <Link className="link-join" onClick={this.leaveGroup}>Leave Group</Link>
 
         }
+
+        // if (Object.values(this.props.group).length === 0) { return null; }
+
+        // if ((this.props.currentUser) && (!this.props.group.members.includes(this.props.currentUser.id))) {
+        //     showit = <button className="link-join" onClick={this.joinGroup}>Join Group</button>
+        // } else {
+        //     showit = <button className="link-join" onClick={this.leaveGroup}>Leave Group</button>
+
+        // }
     
         if (this.props.group && this.props.group.photo) {
             photo = <div className='group-photo'><img src={this.props.group.photo} /></div>
@@ -75,7 +75,7 @@ class GroupShow extends React.Component {
                             <i id="show-user" className="fa fa-user" aria-hidden="true"></i>
                             <label className="show-user">Organized by {this.props.group.organizer.name}</label>
                         </div>
-                        <div>{showit}</div>
+                        {showit}
                     </div>
                 </div>
 
