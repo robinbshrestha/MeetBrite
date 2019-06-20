@@ -1,5 +1,4 @@
 import React from 'react';
-import Index from './index';
 import IndexContainer from './index/index_container';
 import NavbarContainer from './nav/navbar_container';
 import Meetup from './nav/meetup_container';
@@ -30,7 +29,6 @@ const App = () => (
             <AuthRoute path="/login" component={LoginFormContainer} />
             <Route path="/create" component={CreateContainer} />
             <Route exact path='/groups/:groupId/' component={GroupShowContainer} />
-            {/* <GroupsContainer/> */}
             <FooterContainer/>
 
         </header>

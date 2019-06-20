@@ -30,13 +30,6 @@ class Index extends React.Component{
                 </div>
                 <div className="index-bottom">
                     <ul className="index-link">{groups}</ul>
-
-                    {/* <div><Link className="index-link">Join a Movement</Link></div>
-                    <div><Link className="index-link">Learn to Cook</Link></div>
-                    <div><Link className="index-link">Train for a marathon</Link></div>
-                    <div><Link className="index-link">Practice a Language</Link></div>
-                    <div><Link className="index-link">Hike a mountain</Link></div>
-                    <div><Link className="index-link">Build a mobile app</Link></div> */}
                 </div>
                 <div className="index-border">
 
@@ -47,32 +40,3 @@ class Index extends React.Component{
 }
 
 export default Index;
-
-// export default () => (
-// <div>
-// <div className="video-container">
-//     <video id="video" autoPlay loop muted>
-//         <source src="https://www.meetup.com/mu_static/en-US/video.dddafbfe.mp4" type="video/mp4" />
-//     </video>
-//     <div className="overlay">
-//         <h2>The real world is calling</h2>
-//         <h3>Join a local group to meet people, try something new, or do more of what you love.</h3>
-//         <span className="center-button">
-//                 <h4><Link className="index" to="/register">Join MeetBrite</Link></h4>
-//         </span>
-//     </div>
-// </div>
-//     <div className="index-bottom"> 
-//         <div><Link className="index-link">Join a Movement</Link></div>
-//         <div><Link className="index-link">Learn to Cook</Link></div>
-//         <div><Link className="index-link">Train for a marathon</Link></div>
-//         <div><Link className="index-link">Practice a Language</Link></div>
-//         <div><Link className="index-link">Hike a mountain</Link></div>
-//         <div><Link className="index-link">Build a mobile app</Link></div>
-//     </div>
-//         <div className="index-border">
-            
-//         </div>
-// </div>       
-
-// )
