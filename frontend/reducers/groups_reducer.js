@@ -13,6 +13,11 @@ const groupsReducer = (state = {}, action) => {
             newState = merge({}, state, { [action.group.id]: action.group });
             newState[action.group.id].members = action.group.members;
             return newState;
+            
+            // newState = merge({}, state);
+            // delete newState[action.group.id];
+            // return merge({}, newState, {[action.group.id]: action.group});
+
         case REMOVE_GROUP:
             newState = merge({}, state);
             delete newState[action.groupId];

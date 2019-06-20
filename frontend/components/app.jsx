@@ -1,5 +1,6 @@
 import React from 'react';
 import Index from './index';
+import IndexContainer from './index/index_container';
 import NavbarContainer from './nav/navbar_container';
 import Meetup from './nav/meetup_container';
 import SignupFormContainer from './session/signup_form_container';
@@ -22,7 +23,7 @@ const App = () => (
             <NavbarContainer/>
             <AuthRoute path="/register" component={SignupFormContainer} />
             
-            <Route exact path="/" component={Index} />
+            <Route exact path="/" component={IndexContainer} />
             <ProtectedRoute path="/meetup" component={Meetup} />
             <Route path="/meetup" component={GroupsContainer} />
             <ProtectedRoute path="/groups/:groupId/manage" component={EditGroupFormContainer} />
