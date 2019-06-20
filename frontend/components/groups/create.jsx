@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter, Route, Redirect } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 class CreateForm extends React.Component {
     constructor(props) {
@@ -15,9 +16,13 @@ class CreateForm extends React.Component {
     }
 
     handleSubmit(e) {
-        e.preventDefault();
-        this.props.createGroup(this.state)
+        e.preventDefault()
+        if (!this.props.currentUser) {
+            this.props.history.push('/login')
+        } else {
+            this.props.createGroup(this.state)
         .then( () => this.props.history.push('/meetup'));
+        }
     }
 
     render () {
