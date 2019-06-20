@@ -6,6 +6,7 @@ import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
 import { Route } from 'react-router-dom';
 import FooterContainer from './footer/footer_container';
+import EditGroupFormContainer from './groups/edit_group_form_container';
 import EventsContainer from './events/events_container';
 import GroupsContainer from './groups/groups_container';
 import CreateContainer from './groups/create_container';
@@ -24,6 +25,7 @@ const App = () => (
             <Route exact path="/" component={Index} />
             <ProtectedRoute path="/meetup" component={Meetup} />
             <Route path="/meetup" component={GroupsContainer} />
+            <Route path="/groups/:groupId/manage" component={EditGroupFormContainer} />
             <AuthRoute path="/login" component={LoginFormContainer} />
             <Route path="/create" component={CreateContainer} />
             <Route exact path='/groups/:groupId/' component={GroupShowContainer} />
