@@ -6,6 +6,15 @@
   background-color: #e5e7e9;
 }
 
+.nomanage {
+  display: none;
+}
+
+.manage {
+  display: inline;
+}
+
+
 .show-top {
   display: flex;
   height: 380px;

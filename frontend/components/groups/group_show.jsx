@@ -29,31 +29,28 @@ class GroupShow extends React.Component {
         e.preventDefault();
         this.props.leaveGroup(this.props.group.id);
     }
+
     
     render() {
         let photo;
         let showit;
+        let yaaa;
+
         if (Object.values(this.props.group).length === 0) { return null; }
         else if (!this.props.currentUser) {
             showit = <Link className="link-join" to="/login">Join Group</Link>
-        } else if (this.props.currentUser.id === this.props.group.organizer.id) {
-            showit = <Link className="link-join" to="/groups/${group.id}/manage">Manage Group</Link>
-        }
+        } 
         else if ((this.props.currentUser) && (!this.props.group.members.includes(this.props.currentUser.id))) {
             showit = <Link className="link-join" onClick={this.joinGroup}>Join Group</Link>
         } else {
             showit = <Link className="link-join" onClick={this.leaveGroup}>Leave Group</Link>
-
         }
 
-        // if (Object.values(this.props.group).length === 0) { return null; }
-
-        // if ((this.props.currentUser) && (!this.props.group.members.includes(this.props.currentUser.id))) {
-        //     showit = <button className="link-join" onClick={this.joinGroup}>Join Group</button>
-        // } else {
-        //     showit = <button className="link-join" onClick={this.leaveGroup}>Leave Group</button>
-
-        // }
+        if (this.props.currentUser.id === this.props.group.organizer.id) {
+            yaaa = "manage"
+        } else {
+            yaaa = "nomanage"
+        }
     
         if (this.props.group && this.props.group.photo) {
             photo = <div className='group-photo'><img src={this.props.group.photo} /></div>
@@ -89,6 +86,7 @@ class GroupShow extends React.Component {
                             <label className="show-user">Organized by {this.props.group.organizer.name}</label>
                         </div>
                         {showit}
+                        <div className={yaaa}> <Link className="link-join" to={`/groups/${this.props.group.id}/manage`}>Manage Group</Link></div>
                     </div>
                 </div>
 

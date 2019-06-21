@@ -8,13 +8,8 @@ const msp = (state, ownProps) => {
         currentUser: state.session.currentUser,
         group: state.entities.groups[ownProps.match.params.groupId] || {},
         
-    }
-    // const users = state.entities.users; 
-    // return {
-    //     group,
-    //     currentUser,
-    //     organizer
-    // };
+    };
+
 };
 
 const mdp = dispatch => {
