@@ -45,8 +45,9 @@ class GroupShow extends React.Component {
         } else {
             showit = <Link className="link-join" onClick={this.leaveGroup}>Leave Group</Link>
         }
-
-        if (this.props.currentUser.id === this.props.group.organizer.id) {
+        
+        if (Object.values(this.props.group).length === 0) { return null; }
+        else if (this.props.currentUser.id === this.props.group.organizer.id) {
             yaaa = "manage"
         } else {
             yaaa = "nomanage"

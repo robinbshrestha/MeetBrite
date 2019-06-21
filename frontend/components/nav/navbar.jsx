@@ -64,8 +64,7 @@ class Navbar extends React.Component {
                             </div>
                             {this.state.yesmenu ? (
                                 <div>
-                                    <button class="w3button" onClick={this.props.logout}>Log Out</button>
-                                        
+                                    <Link className="w3button" to="/" onClick={this.props.logout}>Log Out</Link>                                        
                                 </div>
                             ) : (
                                     null
