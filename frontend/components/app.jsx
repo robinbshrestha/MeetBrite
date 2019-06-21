@@ -27,7 +27,7 @@ const App = () => (
             <Route path="/meetup" component={GroupsContainer} />
             <ProtectedRoute path="/groups/:groupId/manage" component={EditGroupFormContainer} />
             <AuthRoute path="/login" component={LoginFormContainer} />
-            <Route path="/create" component={CreateContainer} />
+            <ProtectedRoute path="/create" component={CreateContainer} />
             <Route exact path='/groups/:groupId/' component={GroupShowContainer} />
             <FooterContainer/>
 

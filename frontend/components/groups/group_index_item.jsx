@@ -9,11 +9,21 @@ const GroupIndexItem = props => {
 
     }
 
+    let numMem;
+    if (props.group.membersarray === 1) {
+        numMem = <div className="grid-text">{props.group.membersarray} Member</div>
+
+
+    } else {
+        numMem = <div className="grid-text">{props.group.membersarray} Members</div>
+
+    }
+
     return (
         <div>
         <Link className="grid-link-text" to={`/groups/${props.group.id}`}>
             <h3 className="grid-text">{props.group.title}</h3>
-                <div className="grid-text">{props.group.membersarray} Members</div>
+                {numMem}
             <div className='grid-group'>{photo}</div>
         </Link>
 

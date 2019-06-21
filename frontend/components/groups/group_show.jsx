@@ -9,6 +9,7 @@ class GroupShow extends React.Component {
 
     }
     componentDidMount() {
+        window.scrollTo(0, 0);
         this.props.fetchGroup(this.props.match.params.groupId);
 
     }
@@ -57,6 +58,13 @@ class GroupShow extends React.Component {
             photo = <div className='group-photo'><img src="https://meetbrite-seeds.s3.amazonaws.com/photo9.jpg" /></div>
         }
 
+        let numMem;
+        if (this.props.group.membersarray === 1) {
+            numMem = <label className="show-mem">{this.props.group.membersarray} Member</label>
+
+        } else {
+            numMem = <label className="show-mem">{this.props.group.membersarray} Members</label>
+        }
 
 
         return (
@@ -71,7 +79,7 @@ class GroupShow extends React.Component {
                         <label className="show-city">New York, NY</label>
                         <div>
                             <i id="show-people" className="fas fa-users"></i>
-                            <label className="show-mem">{this.props.group.membersarray} Members</label>
+                            {numMem}
                         </div>
                         <div>
                             <i id="show-user" className="fa fa-user" aria-hidden="true"></i>
