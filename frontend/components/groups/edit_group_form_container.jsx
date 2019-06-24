@@ -24,7 +24,7 @@ const mdp = dispatch => {
     return {
         fetchGroup: id => dispatch(fetchGroup(id)),
         action: group => dispatch(updateGroup(group)),
-        deleteGroup: id => dispatch(deletegroup(id))
+        deleteGroup: id => dispatch(deleteGroup(id))
     };
 };
 

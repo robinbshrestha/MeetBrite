@@ -37,7 +37,7 @@ class Api::GroupsController < ApplicationController
 
     def destroy
         @group = Group.find(params[:id])
-        group.delete if group.organizer.id == current_user.id
+        @group.delete if @group.organizer.id == current_user.id
         @groups = Group.all
         render :index
         

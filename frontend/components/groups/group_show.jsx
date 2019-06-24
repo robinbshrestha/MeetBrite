@@ -36,6 +36,7 @@ class GroupShow extends React.Component {
         let showjoin;
         let showmanage;
 
+
         if (Object.values(this.props.group).length === 0) { return null; }
         else if (!this.props.currentUser) {
             showjoin = <Link className="link-join" to="/login">Join Group</Link>
@@ -46,12 +47,17 @@ class GroupShow extends React.Component {
             showjoin = <Link className="link-join" onClick={this.leaveGroup}>Leave Group</Link>
         }
         
-        if (Object.values(this.props.group).length === 0) { return null; }
-        else if (this.props.currentUser.id === this.props.group.organizer.id) {
-            showmanage = "manage"
-        } else {
+        if (!this.props.currentUser) {
             showmanage = "nomanage"
+        } else if (this.props.currentUser.id === this.props.group.organizer.id) {
+            showmanage = "manage"
         }
+        // if (Object.values(this.props.group).length === 0) { return null; }
+        // else if (this.props.currentUser.id === this.props.group.organizer.id) {
+        //     showmanage = "manage"
+        // } else {
+        //     showmanage = "nomanage"
+        // }
     
         if (this.props.group && this.props.group.photo) {
             photo = <div className='group-photo'><img src={this.props.group.photo} /></div>

@@ -8,6 +8,7 @@ class EditGroupForm extends React.Component {
             ...this.props.group
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
 
@@ -35,6 +36,11 @@ handleSubmit(e) {
 
     this.props.action(formData).then(() => this.props.history.push(`/groups/${formData.get('group[id]')}`));
 
+}
+
+handleDelete(e) {
+    e.preventDefault();
+    this.props.deleteGroup(this.state.id).then(() => this.props.history.push(`/meetup`));
 }
 
     update(field) {
@@ -68,18 +74,18 @@ render() {
             <form className="createform" onSubmit={this.handleSubmit}>
         
                 <div className="create-1">
-                    <h6 className="create-step">Step 2 of 3</h6>
-                    <h1>What will your group's name be?</h1>
+                    <h1>Edit your group name</h1>
                     <h4 className="italics">Choose a name that will give people a clear idea of what the group is about.</h4>
                     <input className="input-2" type='text' onChange={this.update('title')} value={this.state.title} />
                 </div>
                 <div className="create-1">
-                    <h6 className="create-step">Step 3 of 3</h6>
-                    <h1>Now describe what your group will be about</h1>
-                    <h4 className="italics">People will see this when we promote your group, but you’ll be able to add to it later, too.</h4>
+                    <h6 className="create-step"></h6>
+                    <h1>Edit what your group is about</h1>
+                    <h4 className="italics">What is this group's purpose?  Who should join your group?  Why should they join your group?</h4>
                     <textarea type='text' onChange={this.update('description')} value={this.state.description} />
                     <div className="submit-div">
                         <input type="submit" className="create-submit" value="Update your group!" />
+                        <img className="delete-trash" onClick={this.handleDelete} src="https://meetbrite-seeds.s3.amazonaws.com/delete.png" />
                     </div>
                 </div>
             </form>
