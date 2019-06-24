@@ -20,13 +20,16 @@ export const createGroup = (group) => (
     })
 );
 
-export const updateGroup = (group) => (
-    $.ajax({
+
+export const updateGroup = group => {
+    return $.ajax({
         method: 'PATCH',
-        url: `api/groups/${group.id}`,
-        data: { group }
-    })
-);
+        url: `api/groups/${group.get('group[id]')}`,
+        data: group,
+        contentType: false,
+        processData: false
+    });
+};
 
 export const deleteGroup = (id) => (
     $.ajax({

@@ -23,9 +23,6 @@ componentDidUpdate(prevProps) {
     }
 }
 
-handleChange(field) {
-    return e => this.setState({ [field]: e.target.value });
-}
 
 handleSubmit(e) {
     e.preventDefault();
@@ -40,16 +37,19 @@ handleSubmit(e) {
 
 }
 
+    update(field) {
+        return e => this.setState({
+            [field]: e.target.value
+        });
+    }
+
 render() {
-    // if (!this.props.group) {
-    //     return null;
-    // }
 
     if (Object.values(this.props.group).length === 0) { return null; }
 
 
     return( 
-        <div className='edit-all'>
+        <div className='update-all'>
             <Route 
                 path='/create'
                 render={ () => {
@@ -61,8 +61,33 @@ render() {
                 }
             }
             />
-            <h1 className='update-group-title'>{this.state.title}</h1>
-            <form className='update-group-form' onSubmit={this.handleSubmit}>
+            <div className="update-banner">
+             <h1 className='update-group-title'>{this.state.title}</h1>
+            </div>
+
+            <form className="createform" onSubmit={this.handleSubmit}>
+        
+                <div className="create-1">
+                    <h6 className="create-step">Step 2 of 3</h6>
+                    <h1>What will your group's name be?</h1>
+                    <h4 className="italics">Choose a name that will give people a clear idea of what the group is about.</h4>
+                    <input className="input-2" type='text' onChange={this.update('title')} value={this.state.title} />
+                </div>
+                <div className="create-1">
+                    <h6 className="create-step">Step 3 of 3</h6>
+                    <h1>Now describe what your group will be about</h1>
+                    <h4 className="italics">People will see this when we promote your group, but you’ll be able to add to it later, too.</h4>
+                    <textarea type='text' onChange={this.update('description')} value={this.state.description} />
+                    <div className="submit-div">
+                        <input type="submit" className="create-submit" value="Update your group!" />
+                    </div>
+                </div>
+            </form>
+
+
+
+            
+            {/* <form className='update-group-form' onSubmit={this.handleSubmit}>
                 <h3 className='update-group-head'>About this MeetBrite Group</h3>
 
                 <div className='update-group-name'>
@@ -91,7 +116,8 @@ render() {
                 </div>
 
                 <h3 className='update-group-subh'>Meetbrite group logo</h3>
-            </form>
+            </form> */}
+
         </div>
     )
 }

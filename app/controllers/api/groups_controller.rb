@@ -26,10 +26,10 @@ class Api::GroupsController < ApplicationController
    
     def update
         @group = Group.find(params[:id])
-        if @group.update(group_params) && (@group.organizer_id == current_user.id)
+        if @group.update(group_params) && (@group.organizer.id === current_user.id) 
             render :show 
         else
-            render json: @groups.errors.full_messages, status: 422
+            render json: @group.errors.full_messages, status: 422
         end
       
     end
@@ -37,7 +37,7 @@ class Api::GroupsController < ApplicationController
 
     def destroy
         @group = Group.find(params[:id])
-        group.delete if group.creator_id == current_user.id
+        group.delete if group.organizer.id == current_user.id
         @groups = Group.all
         render :index
         
@@ -51,6 +51,6 @@ class Api::GroupsController < ApplicationController
 
     private
     def group_params
-        params.require(:group).permit(:title, :description, :location_id, :organizer_id, :photo)
+        params.require(:group).permit(:title, :description, :location_id, :organizer)
     end
 end

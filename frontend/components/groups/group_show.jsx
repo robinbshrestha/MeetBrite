@@ -33,24 +33,24 @@ class GroupShow extends React.Component {
     
     render() {
         let photo;
-        let showit;
-        let yaaa;
+        let showjoin;
+        let showmanage;
 
         if (Object.values(this.props.group).length === 0) { return null; }
         else if (!this.props.currentUser) {
-            showit = <Link className="link-join" to="/login">Join Group</Link>
+            showjoin = <Link className="link-join" to="/login">Join Group</Link>
         } 
         else if ((this.props.currentUser) && (!this.props.group.members.includes(this.props.currentUser.id))) {
-            showit = <Link className="link-join" onClick={this.joinGroup}>Join Group</Link>
+            showjoin = <Link className="link-join" onClick={this.joinGroup}>Join Group</Link>
         } else {
-            showit = <Link className="link-join" onClick={this.leaveGroup}>Leave Group</Link>
+            showjoin = <Link className="link-join" onClick={this.leaveGroup}>Leave Group</Link>
         }
         
         if (Object.values(this.props.group).length === 0) { return null; }
         else if (this.props.currentUser.id === this.props.group.organizer.id) {
-            yaaa = "manage"
+            showmanage = "manage"
         } else {
-            yaaa = "nomanage"
+            showmanage = "nomanage"
         }
     
         if (this.props.group && this.props.group.photo) {
@@ -86,8 +86,8 @@ class GroupShow extends React.Component {
                             <i id="show-user" className="fa fa-user" aria-hidden="true"></i>
                             <label className="show-user">Organized by {this.props.group.organizer.name}</label>
                         </div>
-                        {showit}
-                        <div className={yaaa}> <Link className="link-join" to={`/groups/${this.props.group.id}/manage`}>Manage Group</Link></div>
+                        {showjoin}
+                        <div className={showmanage}> <Link className="link-join" to={`/groups/${this.props.group.id}/manage`}>Manage Group</Link></div>
                     </div>
                 </div>
 

@@ -11,9 +11,12 @@ const msp = (state, ownProps) => {
     };
 
     const group = state.entities.groups[ownProps.match.params.groupId] || defaultGroup;
+    const formType = 'Update Group'
     return {
         currentUser: state.session.currentUser,
-        group
+        group,
+        formType
+        
     }
 }
 
