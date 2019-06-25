@@ -38,9 +38,15 @@ class Navbar extends React.Component {
                             <Link to="/" className="logo">MeetBrite</Link>
                         </div>
                         <div className="nav-bar-right">
-                            <Link to="/create" className="group">Start a new group</Link>
-                            <Link to="/login" className="nav">Log in</Link>
+                            <div className="start-group">
+                                <Link className="group" to="/create">Start a new group</Link>
+                            </div>
+                            <div className="start-nav1">
+                                <Link to="/login" className="nav">Log in</Link>
+                            </div>
+                            <div className="start-nav2">
                             <Link to="/register" className="nav">Sign up</Link>
+                            </div>
                         </div>
                     </div>
                 </div>

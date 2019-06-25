@@ -1,7 +1,7 @@
 .nav-bar {
     position: relative;
     display: flex;
-    padding: 20px 10px 10px;
+    padding: 20px 10px 10px 20px;
     justify-content: space-between;
     border-bottom: .5px solid rgb(224, 224, 224);
     height: 40px;
@@ -17,15 +17,62 @@
     font-size: 15px;
 }
 
-.nav-bar-right > .group {
-    padding-right: 40px;
-    color: #00A2C7;
-    font-weight: bold;
+.start-nav1, .start-nav2{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column; 
+    flex-basis: 125px;
+    /* padding: 0 0 0 15px; */
+    
+}
+
+.start-nav1 {
+    border-left: solid 1px #e6e8e9;
+        height: 25px;
+    position: relative;
+    top: 5px;
+    right: 5px; 
 
 }
 
-.nav-bar-right > .nav {
-    padding-right: 20px;
+.start-nav2 {
+    height: 25px;
+    position: relative;
+    top: 5px;
+    right: 5px;
+}
+
+.start-group {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column; 
+    flex-basis: 500px;
+    width: 300px;
+    position: relative;
+    bottom: 5px;
+    left: 55px;
+    
+}
+
+.group {
+    /* padding-right: 20px; */
+    color: #00A2C7;
+    font-weight: bold;
+    /* justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column; */
+    padding: 0px, 16px, 0px, 20px;
+}
+
+.nav {
+    padding-left: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 a.nav {
