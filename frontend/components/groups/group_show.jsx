@@ -51,6 +51,8 @@ class GroupShow extends React.Component {
             showmanage = "nomanage"
         } else if (this.props.currentUser.id === this.props.group.organizer.id) {
             showmanage = "manage"
+        } else {
+            showmanage = "nomanage"
         }
         // if (Object.values(this.props.group).length === 0) { return null; }
         // else if (this.props.currentUser.id === this.props.group.organizer.id) {
