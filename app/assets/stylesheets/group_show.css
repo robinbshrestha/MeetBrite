@@ -22,6 +22,8 @@
   overflow: hidden;
 }
 
+
+
 .show-top > div {
   padding: 0px 20px;
 }
@@ -43,9 +45,19 @@
   flex-direction: column;
   width: 50%;
   position: relative;
-  left: 20px;
+  left: 120px;
   height: 300px;
-  top: 50px;
+  /* top: 50px; */
+
+}
+
+.show-description {
+  line-height: 1.5;
+}
+.show-description-box {
+  display: flex;
+  margin-bottom: 0px;
+  padding-bottom: 20px;
 
 }
 
@@ -93,27 +105,43 @@ a.link-join {
   top: 25px;
   width: 100%;
   border-top: 1px solid gray;
+
 }
 
-.group-show-stripe {
+.group-show-line {
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  flex-direction: row;
 }
 
 .about-events {
-  width: 600px;
+  display: flex;
+  flex-direction: row;
+  width: 500;
   padding-left: 50px;
+  position: relative;
+  left: 80px;
+  justify-content: space-between;
 }
 
 .about-tab {
+  display: flex;
+  flex-direction: row;
   color: blue;
+
 }
 
 .events-tab {
-  padding-left: 50px;
+    display: flex;
+  flex-direction: row;
+  /* padding-left: 50px; */
 }
+
 .membership-button-div {
   width: 450px;
   padding-left: 100px;
 }
+
+
+
 
