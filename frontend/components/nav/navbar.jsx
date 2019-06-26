@@ -67,8 +67,9 @@ class Navbar extends React.Component {
                                 <i className="far fa-user-circle" onClick={this.yesmenu}></i>
                             </div>
                             {this.state.yesmenu ? (
-                                <div>
-                                    <Link className="w3button" to="/" onClick={this.props.logout}>Log Out</Link>
+                                <div className="navbar-dropdown">
+                                    {/* <Link className="w3button" to="/" onClick={this.props.logout}>Log Out</Link> */}
+                                    <button className="navbar-button" onClick={this.props.logout}>Log Out</button>
                                 </div>
                             ) : (
                                     null
