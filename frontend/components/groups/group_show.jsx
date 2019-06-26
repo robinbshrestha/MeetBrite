@@ -106,8 +106,8 @@ class GroupShow extends React.Component {
                                 <div className='about-tab'>About</div>
                                 <div className='events-tab'>Events</div>
                                 <div>Members</div>
-                                <div>Members</div>
-                                <div>Members</div>
+                                <div>Photos</div>
+                                <div>Discussions</div>
                             </div>
                             <div className='membership-button-div'>
 
@@ -123,10 +123,14 @@ class GroupShow extends React.Component {
                     <div>
                         <div className='show-description'>{this.props.group.description}</div>
                         <div className='show-location'> </div>
-
+                    </div>
+                    <div>
 
                     </div>
                 </div>
+                    {/* <div className="right-description">
+                        adsfafds
+                    </div> */}
                 </div>
             </div>
         )
