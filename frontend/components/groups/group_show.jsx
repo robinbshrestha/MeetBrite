@@ -99,6 +99,21 @@ class GroupShow extends React.Component {
                     </div>
                 </div>
 
+                <div className="group-bottom">
+                    <div className='group-show-stripe'>
+                        <div>
+                            <div className='about-events'>
+                                {/* <div className='about-tab'>About</div> */}
+                                {/* <div className='events-tab'>Events</div> */}
+                            </div>
+                            <div className='membership-button-div'>
+                                {/* {showjoin}
+                                <div className={showmanage}> <Link className="link-join" to={`/groups/${this.props.group.id}/manage`}>Manage Group</Link></div> */}
+                            </div>
+                        </div>
+                    </div>
+               
+
                 <div className='show-bottom'>
                     <h1 className='show-description'>
                         What we are about
@@ -110,7 +125,7 @@ class GroupShow extends React.Component {
 
                     </div>
                 </div>
-
+                </div>
             </div>
         )
     }

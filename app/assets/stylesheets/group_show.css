@@ -18,11 +18,16 @@
 .show-top {
   display: flex;
   height: 380px;
-  padding: 20 0 20 100;
+  padding: 20px 0px 20px 100px;
+  overflow: hidden;
 }
 
 .show-top > div {
   padding: 0px 20px;
+}
+.show-text {
+  width: 450px;
+  overflow-wrap: break-word;
 }
 
 .group-photo > img {
@@ -82,3 +87,33 @@ a.link-join:hover, a.link-join:active {
 a.link-join {
     border-radius: 3px;
 }
+
+.group-bottom {
+  position: relative;
+  top: 25px;
+  width: 100%;
+  border-top: 1px solid gray;
+}
+
+.group-show-stripe {
+  display: flex;
+  justify-content: center;
+}
+
+.about-events {
+  width: 600px;
+  padding-left: 50px;
+}
+
+.about-tab {
+  color: blue;
+}
+
+.events-tab {
+  padding-left: 50px;
+}
+.membership-button-div {
+  width: 452px;
+  padding-left: 100px;
+}
+
