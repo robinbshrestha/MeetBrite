@@ -51,7 +51,7 @@
     flex-basis: 500px;
     width: 300px;
     position: relative;
-    bottom: 5px;
+    bottom: 4px;
     left: 55px;
     
 }
@@ -107,7 +107,3 @@ position: relative; bottom: 10px;
 a.nav:hover, a.nav:active {
     color: #97cad1;
 }
-
-
-
-

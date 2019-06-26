@@ -27,9 +27,9 @@ class Navbar extends React.Component {
             document.removeEventListener('click', this.nomenu);
         });
     }
-    
+
     render() {
-        
+
         const loggedout = () => (
             <div>
                 <div>
@@ -45,7 +45,7 @@ class Navbar extends React.Component {
                                 <Link to="/login" className="nav">Log in</Link>
                             </div>
                             <div className="start-nav2">
-                            <Link to="/register" className="nav">Sign up</Link>
+                                <Link to="/register" className="nav">Sign up</Link>
                             </div>
                         </div>
                     </div>
@@ -63,14 +63,12 @@ class Navbar extends React.Component {
                         <div className="lognav-bar-right">
                             <Link to="/create" className="loggroup">Start a new group</Link>
                             <Link to="/meetup" className="lognav">Explore</Link>
-                            <Link to="/meetup" className="lognav">Messages</Link>
-                            <Link to="/meetup" className="lognav">Notifications</Link>
                             <div className="dropdown">
                                 <i className="far fa-user-circle" onClick={this.yesmenu}></i>
                             </div>
                             {this.state.yesmenu ? (
                                 <div>
-                                    <Link className="w3button" to="/" onClick={this.props.logout}>Log Out</Link>                                        
+                                    <Link className="w3button" to="/" onClick={this.props.logout}>Log Out</Link>
                                 </div>
                             ) : (
                                     null
@@ -86,5 +84,5 @@ class Navbar extends React.Component {
     }
 }
 
-export default Navbar; 
+export default Navbar;
 
