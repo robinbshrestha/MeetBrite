@@ -57,6 +57,9 @@ group6 = Group.create!(
     organizer_id: demo.id
 )
 
+demo.photo.attach(io: open("https://meetbrite-seeds.s3.amazonaws.com/avatar.png"), filename:'avatar.png')
+user1.photo.attach(io: open("https://meetbrite-seeds.s3.amazonaws.com/avatar.png"), filename:'avatar.png')
+
 group1.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo10.jpg'), filename:'photo10.jpg')
 group2.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo4.jpg'), filename:'photo4.jpg')
 group3.photo.attach(io: open('https://meetbrite-seeds.s3.amazonaws.com/photo6.jpeg'), filename:'photo6.jpeg')

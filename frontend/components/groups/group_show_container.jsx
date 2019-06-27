@@ -7,6 +7,7 @@ const msp = (state, ownProps) => {
     return {
         currentUser: state.session.currentUser,
         group: state.entities.groups[ownProps.match.params.groupId] || {},
+        organizer: state.entities.groups[ownProps.match.params.groupId.organizer]
         
     };
 

@@ -35,6 +35,7 @@ class GroupShow extends React.Component {
         let photo;
         let showjoin;
         let showmanage;
+        let avatar;
 
 
         if (Object.values(this.props.group).length === 0) { return null; }
@@ -51,6 +52,7 @@ class GroupShow extends React.Component {
             showmanage = "nomanage"
         } else if (this.props.currentUser.id === this.props.group.organizer.id) {
             showmanage = "manage"
+            avatar = <img src="https://meetbrite-seeds.s3.amazonaws.com/avatar.png" className="avatar" />
         } else {
             showmanage = "nomanage"
         }
@@ -75,6 +77,19 @@ class GroupShow extends React.Component {
             numMem = <label className="show-mem">{this.props.group.membersarray} Members</label>
         }
 
+        
+    
+
+
+        // if (!this.props.currentUser) {return null}
+        // else if (this.props.group.organizer.id === this.props.currentUser.id) {
+        //     avatar = <img src="https://meetbrite-seeds.s3.amazonaws.com/avatar.png" className="avatar"/>
+        // }
+
+        // const memberAvatars = this.props.group.member_avatars.map((avatar, idx) => <li key={idx}><img src={avatar} className='avatar' /></li>);
+        const memberAvatars = this.props.group.members.map((avatar, idx) => <li key={idx}><img src="https://meetbrite-seeds.s3.amazonaws.com/avatar.png" className='avatar' /></li>);
+
+        
 
         return (
             <div className='show-all'>
@@ -124,13 +139,38 @@ class GroupShow extends React.Component {
                         <div className='show-description'>{this.props.group.description}</div>
                         <div className='show-location'> </div>
                     </div>
-                    <div>
-
-                    </div>
-                </div>
+                    
                     {/* <div className="right-description">
-                        adsfafds
+                        <div>Organizers
+                            <div>
+                                <div className="organizer-name">{this.props.group.organizer.name}</div>
+                                <div>{avatar}</div>
+                            </div>       
+                                <div className="ul-avatar"> Members
+                             <div className="li-avatar">{memberAvatars}</div>
+                            </div>
+                        </div>
                     </div> */}
+
+
+                        <div className='right-box'>
+                            <div className='right-org'>
+                                <h3>Organized By</h3>
+                                <div>
+                                    <div>{avatar}</div>
+                                    <div>{this.props.group.organizer.name}</div>
+                                </div>
+                            </div>
+                            <div className='right-members'>
+                                <h3>Members</h3>
+                                <div>
+                                    <ul>{memberAvatars}</ul>
+                                </div>
+                            </div>
+                        </div>
+                
+                </div>
+
                 </div>
             </div>
         )
