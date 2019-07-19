@@ -140,18 +140,6 @@ class GroupShow extends React.Component {
                         <div className='show-location'> </div>
                     </div>
                     
-                    {/* <div className="right-description">
-                        <div>Organizers
-                            <div>
-                                <div className="organizer-name">{this.props.group.organizer.name}</div>
-                                <div>{avatar}</div>
-                            </div>       
-                                <div className="ul-avatar"> Members
-                             <div className="li-avatar">{memberAvatars}</div>
-                            </div>
-                        </div>
-                    </div> */}
-
 
                         <div className='right-box'>
                             <div className='right-org'>
